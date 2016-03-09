@@ -1,0 +1,162 @@
+
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="panel panel-default">
+                            <div class="panel-body text-center">
+                                <img src="images/sponsor-logos.png"><br /><br />
+                                <p>This resource has been funded by Science Foundation Ireland under Grant No. SFI/08/CE/I1380 (Lion-2) and by Grant No. SFI/12/RC/2289 (INSIGHT) <br /> INSIGHT - National University of Ireland, Galway</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- /.row -->
+
+            </div>
+            <!-- /.container-fluid -->
+
+        </div>
+        <!-- /#page-wrapper -->
+
+    </div>
+    <!-- /#wrapper -->
+
+    <!-- jQuery -->
+    <script src="//code.jquery.com/jquery-latest.min.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+
+    <script>
+        $(document).on("click", '.enlarge-panel', function() {
+            $(this).toggleClass('fa-search-plus fa-search-minus')
+                .closest('[class^="col-lg"]')
+                .toggleClass('col-lg-4 col-lg-8')
+                .find(".table-guess").toggleClass('table-guess-open table-guess-close')
+                .find(".truncate").toggleClass('truncateopen truncateclose')
+                ;
+        });
+
+        $('.explore-categories').click(function(){
+            $('.more-categories').toggle(400);
+            return false;
+        });
+
+        function getLink(str){
+            return str.split("/").pop();
+        }
+
+        $('#theForm').submit(function() {
+          var txt = $('#entity');
+          txt.val( getLink( txt.val() ) );
+        });
+
+        <?php 
+            $pageName = basename($_SERVER['PHP_SELF']);
+            if($pageName == 'result.php') {
+        ?>
+        var htm;
+        var jsonUrl = "http://server1.nlp.insight-centre.org:8080/enrgTest2/api/enrg/jsonResults?"
+                        + window.location.search.replace("?", "");
+        var allTypes;
+        var score;
+        var theTableName;
+        
+
+        $.getJSON("inc/get.php?url="+jsonUrl, function(data){
+            
+            // filling main name
+            $(".mainitem-title").text(data["mainitem"]["name"]);
+            $("#mainitemimage").attr('src', data["mainitem"]["picture"]);
+            $("#wikipedia_link").attr('href', data["mainitem"]["wikipedia_link"]);
+            $("#dbpedia_link").attr('href', data["mainitem"]["dbpedia_link"]);
+            $("#mainitemdesc").text(data["mainitem"]["description"]);
+            
+            var mainLink = data["mainitem"]["wikipedia_link"].split("/").pop();
+
+            //filling types
+            $.each(data["mainitem"]["types"],function(typeIndex,typeValue){
+               allTypes += '<li><a href="./yexplore?entity='+mainLink+'&dbpediaType='+ encodeURIComponent(typeIndex) +'">'+typeIndex+'</a></li>';
+            });
+            $(".typescontainer").append(allTypes.replace("undefined", ""));
+
+            $.each(data["categories"],function(headIndex,headValue){
+                $.each(headValue, function(bodyIndex, bodyValue){
+                    theTableName = bodyIndex;
+
+                    htm += '<div class="col-lg-4">\n<div class="panel panel-default">\n<div class="panel-heading">\n<h3 class="panel-title pull-left">' + theTableName + '</h3>\n<i class="enlarge-panel fa fa-fw fa-search-plus pull-right"></i>\n<div class="clearfix"></div>\n</div>\n<div class="panel-body">\n<div class="table-responsive">\n<table class="table table-hover table-striped table-with-progress table-guess table-guess-close">\n<tbody>';
+                    
+                    $.each(bodyValue, function(itemIndex, itemValue){
+                        score = itemValue["score"] * 100;
+                        htm += '<tr>\n<td><a class="truncate truncateclose" href="./result?entity=' + itemValue["wikipedia_link"] + '">' + itemValue["name"] + '</a></td>\n<td><a href="http://en.wikipedia.org/wiki/' + itemValue["wikipedia_link"] + '"><img src="images/icons/wikipedia-icon-16.png"></a></td>\n<td><a href="http://dbpedia.org/page/' + itemValue["dbpedia_link"] + '"><img src="images/icons/dbpedia-icon-16.png"></a></td>\n<td><a href="http://server1.nlp.insight-centre.org:8080/enrgTest/api/enrg/dsmvec?textOne=' + mainLink + '&textTwo=' + itemValue["wikipedia_link"] + '"><img src="images/icons/enrg-icon-16.png"></a></td>\n<td><a href="'+itemValue["google_link"]+'"><img src="images/icons/google-icon-16.png"></a></td>\n<td>\n<div class="progress">\n<div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="' + score + '" aria-valuemin="0" aria-valuemax="100" style="width: ' + score + '%"><span class="sr-only">' + score + '% Complete</span>\n</div>\n</div>\n</td>\n</tr>';
+                    });
+                });
+
+                htm += '</tbody>\n</table>\n<a class="pull-right" href="./explore?entity='+mainLink+'&dbpediaType='+ theTableName +'"> Explore <i class="fa fa-fw fa-chevron-circle-right"></i></a>\n</div>\n</div>\n</div>\n</div>\n<!-- /.col-sm-4 -->';
+            });
+
+            $("#content").append(htm.replace("undefined", ""));
+            $("ol").each(function() {
+                $(this).children().slice(3).hide(); 
+            });
+            $('ol').append('<li class="showmoretypes"><a href="#">More Types <i class="fa fa-fw fa-chevron-circle-right"></i></a></li>');
+        });
+
+        <?php } elseif ($pageName == 'explore.php' || $pageName == 'yexplore.php') { ?>
+
+        var htm;
+        var jsonUrl = "http://server1.nlp.insight-centre.org:8080/enrgTest2/api/enrg/json<?php echo $pageName == 'yexplore.php' ? 'Y' : '';?>ExploreResults?"
+                        + encodeURIComponent(window.location.search.replace("?", ""));
+        var allTypes;
+        var score;
+        var theTableName;
+        var mainLink = '<?=$_GET["dbpediaType"]?>';
+
+        $.getJSON("inc/get.php?url="+jsonUrl, function(data){
+            // filling main name
+            $(".mainitem-title").text(data["mainitem"]["name"]);
+            $("#mainitemimage").attr('src', data["mainitem"]["picture"]);
+            $("#wikipedia_link").attr('href', data["mainitem"]["wikipedia_link"]);
+            $("#dbpedia_link").attr('href', data["mainitem"]["dbpedia_link"]);
+            $("#mainitemdesc").text(data["mainitem"]["description"]);
+
+            $(".category-title").text(mainLink);
+            
+            //filling types
+            $.each(data["mainitem"]["types"],function(typeIndex,typeValue){
+               allTypes += '<li><a href="./yexplore?entity='+getLink(data["mainitem"]["wikipedia_link"])+'&dbpediaType='+ encodeURIComponent(typeIndex) +'">'+typeIndex+'</a></li>';
+            });
+            $(".typescontainer").append(allTypes.replace("undefined", ""));
+
+
+            $.each(data["categories"],function(headIndex,headValue){
+                score = headValue["score"] * 100;
+                htm +='<div class="col-lg-12"><div class="panel panel-default"><div class="panel-heading"><h3 class="panel-title pull-left">'+headValue["name"]+'</h3><div class="pull-right"><table class="panel-info"><tbody><tr><td><a href="'+headValue["wikipedia_link"]+'"><img src="images/icons/wikipedia-icon-16.png"></a></td><td><a href="'+headValue["dbpedia_link"]+'"><img src="images/icons/dbpedia-icon-16.png"></a></td><td><a href="'+headValue["name"]+'"><img src="images/icons/enrg-icon-16.png"></a></td><td><a href="http://www.google.ie/#q=%22' + data["mainitem"]["name"] + '%22+%22' + headValue["name"] + '%22"><img src="images/icons/google-icon-16.png"></a></td><td><div class="progress"><div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="' + score + '" aria-valuemin="0" aria-valuemax="100" style="width: ' + score + '%"><span class="sr-only">' + score + '% Complete</span></div></div></td></tr></tbody></table></div><div class="clearfix"></div></div><ol class="breadcrumb">Types: ';
+
+                $.each(headValue["types"],function(typeIndex,typeValue){
+                    htm += '<li><a href="./yexplore?entity='+getLink(headValue["wikipedia_link"])+'&dbpediaType='+ encodeURIComponent(typeIndex) +'">'+typeIndex+'</a></li>';
+                });
+
+                htm += '</ol><div class="panel-body"><div class="col-lg-3 thumbnail"><img src="'+headValue["picture"]+'" /></div><div class="col-lg-9"><h3 class="main-title">'+headValue["name"]+'</h3><p>'+headValue["description"]+'</p></div></div></div></div>';
+
+            });
+
+            $("#content").append(htm.replace("undefined", ""));
+            $("ol").each(function() {
+                $(this).children().slice(3).hide(); 
+            });
+            $('ol').append('<li class="showmoretypes"><a href="#">More Types <i class="fa fa-fw fa-chevron-circle-right"></i></a></li>');
+        });
+
+        <?php } ?>
+
+        $(document).on("click", '.showmoretypes', function(){
+            $(this).siblings().show();
+            $(this).hide();
+            return false;
+        });
+
+    </script>
+
+</body>
+
+</html>

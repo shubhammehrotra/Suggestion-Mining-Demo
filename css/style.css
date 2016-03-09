@@ -1,0 +1,68 @@
+/*!
+ * EnRG | Entity Relatedness Graph
+ * by @housamz | www.hmz.ie
+ * A project by UNLP in Insight Center for data Analytics 
+ * http://nlp.insight-centre.org/research/demos/entity-relatedness-graph
+ */
+
+/* Top Navigation */
+.top-nav {padding: 0 15px}
+.top-nav>li {display: inline-block;float: left}
+.top-nav>li>a {padding-top: 15px;padding-bottom: 15px;line-height: 20px;color: #999}
+.top-nav>li>a:hover, .top-nav>li>a:focus, .top-nav>.open>a, .top-nav>.open>a:hover, .top-nav>.open>a:focus {color: #fff;background-color: #000}
+.top-nav>.open>.dropdown-menu {float: left;position: absolute;margin-top: 0;border: 1px solid rgba(0,0,0,.15);border-top-left-radius: 0;border-top-right-radius: 0;background-color: #fff;-webkit-box-shadow: 0 6px 12px rgba(0,0,0,.175);box-shadow: 0 6px 12px rgba(0,0,0,.175)}
+.top-nav>.open>.dropdown-menu>li>a {white-space: normal}
+ul.message-dropdown {padding: 0;max-height: 250px;overflow-x: hidden;overflow-y: auto}
+li.message-preview {width: 275px;border-bottom: 1px solid rgba(0,0,0,.15)}
+li.message-preview>a {padding-top: 15px;padding-bottom: 15px}
+li.message-footer {margin: 5px 0}
+ul.alert-dropdown {width: 200px}
+
+
+/* EnRG */
+.navbar-brand { padding: 10px 15px 15px}
+#wrapper{width: 90%; margin: 50px auto 0}
+.home-example-link{margin: 0 10px}
+.color-orange{color:#f37a1f}
+.color-white{color:#fff !important}
+.main-title{margin-top: 0}
+.col-lg-4, .col-lg-8 {transition: .5s}
+.panel-info{width:200px}
+.panel-info tr td:last-child, .table-with-progress tr td:last-child{width:30%}
+.table-with-progress tr td:first-child{width:60%}
+.progress{margin-bottom: 0}
+.more-categories{display: none}
+.thumbnail { width: 200px; height: 160px; overflow: hidden; position: relative}
+
+/* fixes */
+.btn-lg, .btn-group-lg>.btn {padding: 10px 16px 11px}
+
+.truncate { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; display: block}
+.truncateopen  {width: 400px}
+.truncateclose {width: 150px}
+
+.table>thead>tr>th, .table>tbody>tr>th, .table>tfoot>tr>th, .table>thead>tr>td, .table>tbody>tr>td, .table>tfoot>tr>td {
+padding: 8px 4px}
+
+.table-guess{display: block; overflow: hidden}
+.table-guess-close{height: 400px}
+.table-guess-open{height:100%}
+
+.mainitem-title{text-transform: capitalize;}
+
+
+/* Team table */
+.team-table{margin: 0 auto;}
+.team-table tr:nth-child(odd) { background: WhiteSmoke; }
+.team-table td { padding:1em !important; border: 0px !important; vertical-align: middle !important}
+.team-table tr{ font-size: 1.5em; color: SlateGray;
+  .team-table td:nth-child(1) { padding-left: 1.5em !important;  }
+  .team-table td:nth-child(2) { padding-left: 0em !important; }
+  .team-table td:nth-child(3) { text-align: right ; width: 60% ; padding-right: 1.5em !important; }
+}  
+.circle { width: 45px !important; height: 45px !important; background: DimGray ; color: white; display: table-cell; vertical-align: middle; text-align: center; border-radius:100%}
+.first {background: Coral}
+.second {background: Goldenrod}
+.third {background: Grey}
+
+.sr-only{position: relative;color: #333;margin-left: 10px}
