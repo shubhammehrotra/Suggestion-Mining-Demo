@@ -7,7 +7,7 @@
         <div class="col-md-12 ">
             <div class="panel panel-default">
                 <div class="panel-heading">
-                    <h3 class="panel-title" align="center"><b>SuMO (Suggestion Mining from Opinions)</b></h3>
+                    <h3 class="panel-title" align="center"><b>MiSO (Mining Suggestions from Opinions)</b></h3>
                 </div>
                 <div class="panel-body">
                     <p>
@@ -49,7 +49,7 @@
                         <tbody>
                             <tr>
                                 <td>
-                                    <p>Project Lead: </p>
+                                    <p>Research Supervision: </p>
                                 </td>
                                 <td>
                                     <p>&nbsp;&nbsp;&nbsp;&nbsp;<a href = "http://www.paulbuitelaar.net/#!/profile" target="_blank">Paul Buitelaar</a></p>
@@ -68,12 +68,12 @@
                                     <p>Development: </p>
                                 </td>
                                 <td>
-                                    <p>&nbsp;&nbsp;&nbsp;&nbsp;<a href = "http://shubhammehrotra.ml/" target="_blank">Shubham Mehrotra</a></p>
+                                    <p>&nbsp;&nbsp;&nbsp;&nbsp;<a href = "http://shubhammehrotra.ml/" target="_blank">Shubham Mehrotra, Kartik Asooja</a></p>
                                 </td>
                             </tr>
                         </tbody>
                     </table><br>
-                    <p class="large text-muted" align = "center">Special thanks to Kartik Asooja and Housam Ziad for their inputs.
+                    <p class="large text-muted" align = "center">Special thanks to Housam Ziad for his inputs.
                     <br>Please write to <a href="mailto:sapna.negi@insight-centre.org"> sapna.negi@insight-centre.</a>org for any feedback or queries . </p>
                 </div>
             </div>
