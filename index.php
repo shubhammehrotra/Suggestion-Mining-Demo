@@ -155,7 +155,7 @@
             <br>
             <div class="panel panel-default">
                 <div class="panel-heading">
-                    <h3 class="panel-title" align="center"><b>Suggestion Mining from Opinions</b></h3>
+                    <h3 class="panel-title" align="center"><b>Mining Suggestions from Opinions</b></h3>
                 </div>
                 <div class="panel-body">
                     <p>

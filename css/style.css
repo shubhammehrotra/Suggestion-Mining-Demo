@@ -1,8 +1,6 @@
 /*!
- * EnRG | Entity Relatedness Graph
- * by @housamz | www.hmz.ie
+ * MISO | Mining Suggestions From Opinions
  * A project by UNLP in Insight Center for data Analytics 
- * http://nlp.insight-centre.org/research/demos/entity-relatedness-graph
  */
 
 /* Top Navigation */
@@ -32,7 +30,7 @@ ul.alert-dropdown {width: 200px}
 .table-with-progress tr td:first-child{width:60%}
 .progress{margin-bottom: 0}
 .more-categories{display: none}
-.thumbnail { width: 200px; height: 160px; overflow: hidden; position: relative}
+.thumbnail { width: 250px; height: 200px; overflow: hidden; position: relative}
 
 /* fixes */
 .btn-lg, .btn-group-lg>.btn {padding: 10px 16px 11px}
