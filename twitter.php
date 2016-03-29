@@ -44,22 +44,19 @@
             <li><a href="#" id="T6">Twitter 6</a></li>
         </ul>
     </div>
-    <div class="col-md-9 well admin-content">
+    <div class="col-md-9 well admin-content" id = "outer3" hidden>
         <pre id="p3" hidden></pre>
-        <br><br><br><br>
-        <div id="p4" hidden align = "center"></div>
+        <br>
+        <br>
+        <div id="p4" hidden align="center"></div>
     </div>
     <script>
-        
         // or
         //s = d3.selectAll('svg')
 
         $('#list3').on('click', 'li', function () {
+            $('#outer3').show();
             var s = d3.select("#p4").selectAll('#graphic').remove();
-            
-
-            //s = s.remove();
-            //d3.selectAll("#graphic").remove();
             var clicked = $(this).text();
             check = 1;
             //alert(clicked);
@@ -130,7 +127,7 @@
                         zoom(root);
                     });
 
-                zoomTo([root.x, root.y, root.r * 2 /*+ margin*/]);
+                zoomTo([root.x, root.y, root.r * 2 /*+ margin*/ ]);
 
                 function zoom(d) {
                     var focus0 = focus;
@@ -139,7 +136,7 @@
                     var transition = d3.transition()
                         .duration(d3.event.altKey ? 7500 : 750)
                         .tween("zoom", function (d) {
-                            var i = d3.interpolateZoom(view, [focus.x, focus.y, focus.r * 2 /*+ margin*/]);
+                            var i = d3.interpolateZoom(view, [focus.x, focus.y, focus.r * 2 /*+ margin*/ ]);
                             return function (t) {
                                 zoomTo(i(t));
                             };
