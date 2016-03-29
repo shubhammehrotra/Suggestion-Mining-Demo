@@ -16,9 +16,13 @@ li.message-preview>a {padding-top: 15px;padding-bottom: 15px}
 li.message-footer {margin: 5px 0}
 ul.alert-dropdown {width: 200px}
 
+/* Miso */
+.navbar-brand {
+  font-weight: bold;
+  font-size: 3.5rem;
+  padding: 15px 20px 20px
+}
 
-/* EnRG */
-.navbar-brand { padding: 10px 15px 15px}
 #wrapper{width: 90%; margin: 50px auto 0}
 .home-example-link{margin: 0 10px}
 .color-orange{color:#f37a1f}
