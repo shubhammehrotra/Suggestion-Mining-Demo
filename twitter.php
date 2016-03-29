@@ -102,7 +102,7 @@
                         return d.parent ? d.children ? "node" : "node node--leaf" : "node node--root";
                     })
                     .style("fill", function (d) {
-                        return d.children ? color(0) : null;
+                        return d.children ? color(0.3) : null;
                     })
                     .on("click", function (d) {
                         if (focus !== d) zoom(d), d3.event.stopPropagation();
