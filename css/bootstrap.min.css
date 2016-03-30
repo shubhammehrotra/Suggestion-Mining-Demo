@@ -2389,3 +2389,22 @@
  important}}@media
  print{.hidden-print{display:none!important}}
 /*# sourceMappingURL=bootstrap.min.css.map */
+
+/* header */
+header{background: rgba(247, 247, 247, 1)}
+.logo{font-family: 'Lobster', cursive; font-size:40px; color:#606060}
+.logo .blue{color:#4c99da}
+header ul li{float: left;padding:14px 5px;position: relative}
+header ul li a{padding:15px 10px;color: #747475; text-decoration: none}
+header ul li a:hover{background: #4c99da; color:#fff}
+
+header ul li ul {padding: 0;position: absolute;top: 50px;left: 5px;width: 160px;display: none;opacity: 0;visibility: hidden;-webkit-transiton: opacity 0.2s;-moz-transition: opacity 0.2s;-ms-transition: opacity 0.2s;-o-transition: opacity 0.2s;-transition: opacity 0.2s; z-index: 100}
+header ul li ul li { background: #555; display: block; padding: 0}
+header ul li ul li a{color:#fff; width: 144px; display: block}
+header ul li ul li:hover {background: #666}
+header ul li:hover ul {display: block;opacity: 1;visibility: visible}
+
+/* general */
+.clear{clear: both}
+.alighleft{float: left}
+.alighright{float: right}

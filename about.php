@@ -60,7 +60,7 @@
                                     <p>Research and Development: </p>
                                 </td>
                                 <td>
-                                    <p>&nbsp;&nbsp;&nbsp;&nbsp;<a href = "http://nlp.insight-centre.org/people/members/sapna-negi/" target="_blank">Sapna Negi</a></p>
+                                    <p>&nbsp;&nbsp;&nbsp;&nbsp;<a href = "http://www.sapnanegi.info/" target="_blank">Sapna Negi</a></p>
                                 </td>
                             </tr>
                             <tr>
