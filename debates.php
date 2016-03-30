@@ -42,11 +42,11 @@
             <li><a href="#" id="D6">Debate 6</a></li>
         </ul>
     </div>
-    <div class="col-md-9 well admin-content" id = "outer2" hidden>
+    <div class="col-md-9 well admin-content" id="outer2" hidden>
         <pre id="p2" hidden></pre>
         <br>
         <br>
-        <div id="p5" hidden align="center"></div>
+        <div id="p5" hidden></div>
     </div>
     <script>
         // or
@@ -66,9 +66,10 @@
                 diameter = 400;
 
             var color = d3.scale.linear()
-                .domain([-1, 0, 1])
-                .range(["red", "white", "green"])
+                .domain([-1, 5])
+                .range(["hsl(152,80%,80%)", "hsl(228,30%,40%)"])
                 .interpolate(d3.interpolateHcl);
+
 
             var pack = d3.layout.pack()
                 .padding(2)
@@ -97,9 +98,10 @@
                         return d.parent ? d.children ? "node" : "node node--leaf" : "node node--root";
                     })
                     .style("fill", function (d) {
-                        return d.children ? color(0.3) : null;
+                        return d.children ? color(4.3) : null;
                     })
                     .on("click", function (d) {
+                        alert(d.name);
                         if (focus !== d) zoom(d), d3.event.stopPropagation();
                     });
 
@@ -120,7 +122,6 @@
                 var node = svg.selectAll("circle,text");
 
                 d3.select("body")
-                    .style("background", color(0))
                     .on("click", function () {
                         zoom(root);
                     });

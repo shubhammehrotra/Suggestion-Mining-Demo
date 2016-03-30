@@ -48,7 +48,7 @@
         <pre id="p3" hidden></pre>
         <br>
         <br>
-        <div id="p4" hidden align="center"></div>
+        <div id="p4" hidden></div>
     </div>
     <script>
         // or
@@ -99,7 +99,7 @@
                         return d.parent ? d.children ? "node" : "node node--leaf" : "node node--root";
                     })
                     .style("fill", function (d) {
-                        return d.children ? color(0.3) : null;
+                        return d.children ? color(d.depth - 0.5) : null;
                     })
                     .on("click", function (d) {
                         if (focus !== d) zoom(d), d3.event.stopPropagation();

@@ -68,7 +68,7 @@
                                     <p>Development: </p>
                                 </td>
                                 <td>
-                                    <p>&nbsp;&nbsp;&nbsp;&nbsp;<a href = "http://shubhammehrotra.ml/" target="_blank">Shubham Mehrotra, Kartik Asooja</a></p>
+                                    <p>&nbsp;&nbsp;&nbsp;&nbsp;<a href = "http://nlp.insight-centre.org/people/members/shubham-mehrotra/" target="_blank">Shubham Mehrotra</a> , <a href = "http://nlp.insight-centre.org/people/members/kartik-asooja/" target="_blank">Kartik Asooja</p>
                                 </td>
                             </tr>
                         </tbody>
