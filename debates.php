@@ -107,6 +107,7 @@
                     })
                     .on("click", function (d) {
                         var z = d.name;
+                        $('#p2').hide();
                         $('#pr5').show();
                         $('#pr5').text("Suggestions to be shown for the topic : " + z);
                         console.log(d.name);
