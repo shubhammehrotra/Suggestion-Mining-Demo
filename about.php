@@ -23,7 +23,7 @@
         <div class="col-md-12 ">
             <div class="panel panel-default">
                 <div class="panel-heading">
-                    <h3 class="panel-title" align="center"><b>Publications</b></h3>
+                    <h3 class="panel-title" align="center">  <b> <span class="glyphicon glyphicon-duplicate"> </span> Publications</b></h3>
                 </div>
                 <div class="panel-body">
                     <p>
@@ -42,7 +42,7 @@
         <div class="col-md-12 ">
             <div class="panel panel-default">
                 <div class="panel-heading">
-                    <h3 class="panel-title" align="center"><b>Team</b></h3>
+                    <h3 class="panel-title" align="center"><b> <span class="glyphicon glyphicon-user"> </span> Team </b></h3>
                 </div>
                 <div class="panel-body">
                     <table align = "center">

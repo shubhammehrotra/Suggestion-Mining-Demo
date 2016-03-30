@@ -27,7 +27,7 @@
 
     <div id="wrapper">
 
-        <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <nav class="navbar navbar-fixed-top" role="navigation">
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
@@ -36,26 +36,29 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="./"><img src="images/miso.png" /></a>
+                <!--<a class="navbar-brand" href="./"><img src="images/miso.png" /></a>-->
+                <a class="navbar-brand" href="index.php"> MiSO </a> 
+                
             </div>
 
-            <div class="collapse navbar-collapse navbar-ex1-collapse">
-                <ul class="nav navbar-nav side-nav">
+            <div class="collapse navbar-collapse navbar-ex1-collapse navbar-right">
+                <ul class="nav navbar-nav">
                     <li>
-                        <a href="./"> Home</a>
+                        <a href="./"> <span class="glyphicon glyphicon-home"></span>  Home </a>
                     </li>
                     <li>
-                        <a href="about.php"></i> About</a>
+                         
+                        <a href="about.php"></i> <span class="glyphicon glyphicon-info-sign"> </span> About</a>
                     </li>
                     <!--<li>
                         <a href="publications.php">Publications</a>
                     </li>-->
                     <li>
-                        <a href="restapi.php">Rest API</a>
+                        <a href="restapi.php"> <span class="glyphicon glyphicon-cog"> </span> Rest API</a>
                     </li>
                     <li class="dropdown" role="presentation">
                         <a class="dropdown-toggle" data-toggle="dropdown" data-target="nonsense" role="button" aria-haspopup="true" aria-expanded="false" data-hover="dropdown" data-delay="1000">
-                            Use Cases 
+                            <span class="glyphicon glyphicon-briefcase"> </span> Use Cases 
                         </a>
                         <ul class="dropdown-menu" id>
                             <li><a href="reviews.php">Online Reviews</a></li>
@@ -64,6 +67,8 @@
                         </ul>
                         
                     </li>
+                    
+                    <li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></li>
 
                     <!--<li>
                         <a href="team.php">Team</a>
