@@ -103,6 +103,7 @@
                         return d.children ? color(4.3) : null;
                     })
                     .on("click", function (d) {
+                        $('#p3').hide();
                         $('#pr4').show();
                         $('#pr4').text("Suggestions to be shown for topic: " + d.name);
                         if (focus !== d) zoom(d), d3.event.stopPropagation();
