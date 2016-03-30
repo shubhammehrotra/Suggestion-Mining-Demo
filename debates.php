@@ -47,7 +47,7 @@
         <br>
         <br>
         <div id="p5" hidden class = col-md-6></div>
-        <pre id="de5" hidden></pre>
+        <pre id="pr5" hidden></pre>
     </div>
     <script>
         // or
@@ -62,10 +62,10 @@
             //alert(clicked);
             $('#p2').show();
             $('#p5').show();
-             $('#de5').show();
+            
             
             document.getElementById("p5").innerHTML = "";
-            $('#p2').text("Suggestions to be fetched from the api for:  " + clicked);
+            $('#p2').text("Suggestions to be fetched from the api for the topic:  " + clicked);
             
             var margin = 0,
                 diameter = 400;
@@ -107,7 +107,8 @@
                     })
                     .on("click", function (d) {
                         var z = d.name;
-                        $('#de5').text(z);
+                        $('#pr5').show();
+                        $('#pr5').text("Suggestions to be shown for the topic : " + z);
                         console.log(d.name);
                         if (focus !== d) zoom(d), d3.event.stopPropagation();
                     });

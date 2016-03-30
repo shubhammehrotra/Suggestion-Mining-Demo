@@ -44,11 +44,12 @@
             <li><a href="#" id="T6">Twitter 6</a></li>
         </ul>
     </div>
-    <div class="col-md-9 well admin-content" id = "outer3" hidden>
+    <div class="col-md-9 well admin-content" id="outer3" hidden>
         <pre id="p3" hidden></pre>
         <br>
         <br>
-        <div id="p4" hidden></div>
+        <div id="p4" hidden class="col-md-6"></div>
+        <pre id="pr4" hidden></pre>
     </div>
     <script>
         // or
@@ -68,8 +69,8 @@
                 diameter = 400;
 
             var color = d3.scale.linear()
-                .domain([-1, 0, 1])
-                .range(["red", "white", "green"])
+                .domain([-1, 5])
+                .range(["hsl(152,80%,80%)", "hsl(228,30%,40%)"])
                 .interpolate(d3.interpolateHcl);
 
             var pack = d3.layout.pack()
@@ -99,9 +100,11 @@
                         return d.parent ? d.children ? "node" : "node node--leaf" : "node node--root";
                     })
                     .style("fill", function (d) {
-                        return d.children ? color(d.depth - 0.5) : null;
+                        return d.children ? color(4.3) : null;
                     })
                     .on("click", function (d) {
+                        $('#pr4').show();
+                        $('#pr4').text("Suggestions to be shown for topic: " + d.name);
                         if (focus !== d) zoom(d), d3.event.stopPropagation();
                     });
 
@@ -121,9 +124,9 @@
 
                 var node = svg.selectAll("circle,text");
 
-                d3.select("body")
-                    .style("background", color(0))
+                d3.select("#p4")
                     .on("click", function () {
+
                         zoom(root);
                     });
 
