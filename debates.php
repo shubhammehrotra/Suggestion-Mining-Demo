@@ -46,7 +46,8 @@
         <pre id="p2" hidden></pre>
         <br>
         <br>
-        <div id="p5" hidden></div>
+        <div id="p5" hidden class = col-md-6></div>
+        <pre id="de5" hidden></pre>
     </div>
     <script>
         // or
@@ -57,11 +58,15 @@
             var s = d3.select("#p5").selectAll('#graphic').remove();
             var clicked = $(this).text();
             check = 1;
+            var z
             //alert(clicked);
             $('#p2').show();
             $('#p5').show();
+             $('#de5').show();
+            
             document.getElementById("p5").innerHTML = "";
             $('#p2').text("Suggestions to be fetched from the api for:  " + clicked);
+            
             var margin = 0,
                 diameter = 400;
 
@@ -90,7 +95,7 @@
                 var focus = root,
                     nodes = pack.nodes(root),
                     view;
-
+                    
                 var circle = svg.selectAll("circle")
                     .data(nodes)
                     .enter().append("circle")
@@ -101,7 +106,9 @@
                         return d.children ? color(4.3) : null;
                     })
                     .on("click", function (d) {
-                        alert(d.name);
+                        var z = d.name;
+                        $('#de5').text(z);
+                        console.log(d.name);
                         if (focus !== d) zoom(d), d3.event.stopPropagation();
                     });
 
@@ -121,9 +128,11 @@
 
                 var node = svg.selectAll("circle,text");
 
-                d3.select("body")
+                d3.select("#p5")
                     .on("click", function () {
+                        //console.log(root.children.name);
                         zoom(root);
+
                     });
 
                 zoomTo([root.x, root.y, root.r * 2 /*+ margin*/ ]);
@@ -131,7 +140,7 @@
                 function zoom(d) {
                     var focus0 = focus;
                     focus = d;
-
+                    //alert(d.name);
                     var transition = d3.transition()
                         .duration(d3.event.altKey ? 7500 : 750)
                         .tween("zoom", function (d) {
@@ -143,6 +152,7 @@
 
                     transition.selectAll("text")
                         .filter(function (d) {
+                            //alert(d.name);
                             return d.parent === focus || this.style.display === "inline";
                         })
                         .style("fill-opacity", function (d) {
@@ -163,9 +173,11 @@
                         return "translate(" + (d.x - v[0]) * k + "," + (d.y - v[1]) * k + ")";
                     });
                     circle.attr("r", function (d) {
+                        //alert(d.name);
+                        //console.log(d.name);
                         return d.r * k;
                     });
-                }
+                } 
             });
             /*var active = graphic.active ? false : true,
                 newOpacity = active ? 0 : 1;
