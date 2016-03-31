@@ -3,7 +3,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
-     
+    
     <div class="col-md-3">
         <ul class="nav nav-pills nav-stacked admin-menu ">
             <li><a><b>Suggestion Extraction Techniques</a></b>
@@ -19,7 +19,7 @@
             Please enter text in the space provided below :
         </p>
         <div class="row">
- 
+
             <form id="theForm" enctype='application/json' onsubmit="event.preventDefault();">
                 <div class="col-sm-9">
                     <textarea class="form-control" rows="5" id="mainText1" value name="text" type="text">This is a fabulous hotel. The breakfasts are great - fresh fruit bagels, muffins, hot eggs and sausage etc. Just around the corner from the hotel is a fabulous little Italian restaurant - Bon Amici. I highly recommend it. </textarea>
@@ -42,19 +42,19 @@
                         </select>
                     </div>
                 </div>
- 
+
         </div>
- 
-             
+
+            
         <!--<div class="text-center"> <span>
-        <input type="radio" name="textSource" value="twitter" id="tw"> Twitter 
-        <input type="radio" name="textSource" value="general" id="ge"> General 
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <input type="radio" name="language" value="en" id="en"> English 
-        <input type="radio" name="language" value="es" id="es"> Spanish  
- 
-    </div>
-    <br>-->
+		<input type="radio" name="textSource" value="twitter" id="tw"> Twitter 
+		<input type="radio" name="textSource" value="general" id="ge"> General 
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		<input type="radio" name="language" value="en" id="en"> English 
+		<input type="radio" name="language" value="es" id="es"> Spanish  
+
+	</div>
+	<br>-->
         <br>
         <div class="text-center">
             <button type="submit" id="sendJson" class="btn btn-primary btn-md pull-left">Extract</button>
@@ -66,10 +66,10 @@
     </div>
     <!-- jQuery Version 1.11.1 -->
     <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
- 
+
     <script language="javascript" type="text/javascript">
         // This function will convert the form to JSON
- 
+
         $.fn.serializeObject = function () {
             var o = {};
             o['text'] = [];
@@ -88,10 +88,10 @@
             //alert(o);
             return o;
         };
- 
+
         // Here you send & receive the data
         $(function () {
- 
+
             $('#theForm').submit(function () {
                 // First we get the JSON collected from the form
                 $("#result").hide();
@@ -117,21 +117,21 @@
                             $('#result').text("No Suggestions found !");
                         } else {
                             //$('#result').text(response.replace(/[^\w\s\',']/gi, '').replace(/[',']/g,'.\n'));
- 
+
                             $('#result').text(response.replace(/[^\w\s\'.']/gi, '').replace(/['.']/gi, '.\n'));
                         }
                         $('#result').show();
                         $('#sendJson').show();
                         document.getElementById("mainText1").value = '';
- 
- 
+
+
                     },
                     error: function (XMLHttpRequest, textStatus, errorThrown) {
                         // Showing an error message if an error occured
                         $('#result').text(errorThrown);
                     }
                 });
- 
+
                 // please don't remove the return false
                 return false;
             });
@@ -149,7 +149,4 @@
     <br>
     <br>
     <div class="row">
- 
- 
-     
     <?php include("inc/footer.php");?>

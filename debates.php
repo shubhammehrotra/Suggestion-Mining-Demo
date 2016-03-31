@@ -32,21 +32,21 @@
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
     <div class="col-md-3">
         <ul class="nav nav-pills nav-stacked admin-menu " id="list2">
-            <li><a><b>Debate Categories</a></b>
+            <li><a><b>Debate Topics</a></b>
             </li>
-            <li><a href="#" id="D1">Debate 1</a></li>
-            <li><a href="#" id="D2">Debate 2</a></li>
-            <li><a href="#" id="D3">Debate 3</a></li>
-            <li><a href="#" id="D4">Debate 4</a></li>
-            <li><a href="#" id="D5">Debate 5</a></li>
-            <li><a href="#" id="D6">Debate 6</a></li>
+            <li><a href="#" id="D1">Abortion</a></li>
+            <li><a href="#" id="D2">Creation</a></li>
+            <li><a href="#" id="D3">Gay Rights</a></li>
+            <li><a href="#" id="D4">God</a></li>
+            <li><a href="#" id="D5">Healthcare</a></li>
+            <li><a href="#" id="D6">Guns</a></li>
         </ul>
     </div>
     <div class="col-md-9 well admin-content" id="outer2" hidden>
         <pre id="p2" hidden></pre>
         <br>
         <br>
-        <div id="p5" hidden class=c ol-md-6></div>
+        <div id="p5" hidden class=col-md-6></div>
         <pre id="pr5" hidden></pre>
     </div>
     <script>

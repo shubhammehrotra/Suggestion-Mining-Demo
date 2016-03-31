@@ -23,7 +23,7 @@
         .node--root,
         .node--leaf {
             pointer-events: none;
-        }
+        } 
     </style>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
@@ -41,12 +41,12 @@
             <li><a href="#" id="Pr6">Product 6</a></li>
         </ul>
     </div>
-    <div class="col-md-9 well admin-content" id = "outer1" hidden>
+    <div class="col-md-9 well admin-content" id="outer1" hidden>
         <pre id="p1" hidden></pre>
         <br>
         <br>
         <div id="p6" hidden class="col-md-6"></div>
-        <pre id = "pr6" hidden></pre>
+        <pre id="pr6" hidden></pre>
     </div>
     <script>
         // or
@@ -60,8 +60,8 @@
             //alert(clicked);
             $('#p1').show();
             $('#p6').show();
-            document.getElementById("p6").innerHTML = "";
             $('#pr6').hide();
+            document.getElementById("p6").innerHTML = "";
             $('#p1').text("Suggestions to be fetched from the api for:  " + clicked);
             var margin = 0,
                 diameter = 400;

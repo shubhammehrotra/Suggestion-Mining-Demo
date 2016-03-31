@@ -34,14 +34,14 @@
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
     <div class="col-md-3">
         <ul class="nav nav-pills nav-stacked admin-menu " id="list3">
-            <li><a><b>Twitter Categories</a></b>
+            <li><a><b>Politicians' Twitter Handles</a></b>
             </li>
-            <li><a href="#" id="T1">Twitter 1</a></li>
-            <li><a href="#" id="T2">Twitter 2</a></li>
-            <li><a href="#" id="T3">Twitter 3</a></li>
-            <li><a href="#" id="T4">Twitter 4</a></li>
-            <li><a href="#" id="T5">Twitter 5</a></li>
-            <li><a href="#" id="T6">Twitter 6</a></li>
+            <li><a href="#" id="T1">Susan O'Keeffe (@susanokeeffe)</a></li>
+            <li><a href="#" id="T2">MaryMitchellO'Connor (@mitchelloconnor)</a></li>
+            <li><a href="#" id="T3">Michael Mc Carthy (@mmccarthy_mc)</a></li>
+            <li><a href="#" id="T4">Ciara Conway (@ciaramconway)</a></li>
+            <li><a href="#" id="T5">Ciaran Cannon (@ciarancannon)</a></li>
+            <li><a href="#" id="T6">Regina Doherty TD (@ReginaDo) </a></li>
         </ul>
     </div>
     <div class="col-md-9 well admin-content" id="outer3" hidden>
