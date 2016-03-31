@@ -61,6 +61,7 @@
             $('#p1').show();
             $('#p6').show();
             document.getElementById("p6").innerHTML = "";
+            $('#pr6').hide();
             $('#p1').text("Suggestions to be fetched from the api for:  " + clicked);
             var margin = 0,
                 diameter = 400;

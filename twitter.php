@@ -64,7 +64,9 @@
             $('#p3').show();
             $('#p4').show();
             document.getElementById("p4").innerHTML = "";
+            $('#pr4').hide();
             $('#p3').text("Suggestions to be fetched from the api for:  " + clicked);
+
             var margin = 0,
                 diameter = 400;
 
@@ -127,7 +129,6 @@
 
                 d3.select("#p4")
                     .on("click", function () {
-
                         zoom(root);
                     });
 

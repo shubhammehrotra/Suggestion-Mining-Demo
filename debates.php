@@ -46,7 +46,7 @@
         <pre id="p2" hidden></pre>
         <br>
         <br>
-        <div id="p5" hidden class = col-md-6></div>
+        <div id="p5" hidden class=c ol-md-6></div>
         <pre id="pr5" hidden></pre>
     </div>
     <script>
@@ -58,15 +58,13 @@
             var s = d3.select("#p5").selectAll('#graphic').remove();
             var clicked = $(this).text();
             check = 1;
-            var z
-            //alert(clicked);
+            var z;
             $('#p2').show();
             $('#p5').show();
-            
-            
             document.getElementById("p5").innerHTML = "";
+            $('#pr5').hide();
             $('#p2').text("Suggestions to be fetched from the api for the topic:  " + clicked);
-            
+
             var margin = 0,
                 diameter = 400;
 
@@ -95,7 +93,7 @@
                 var focus = root,
                     nodes = pack.nodes(root),
                     view;
-                    
+
                 var circle = svg.selectAll("circle")
                     .data(nodes)
                     .enter().append("circle")
@@ -179,7 +177,7 @@
                         //console.log(d.name);
                         return d.r * k;
                     });
-                } 
+                }
             });
             /*var active = graphic.active ? false : true,
                 newOpacity = active ? 0 : 1;
