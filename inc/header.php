@@ -27,7 +27,7 @@
 
     <div id="wrapper">
 
-        <nav class="navbar navbar-fixed-top" role="navigation">
+        <nav class = "navbar navbar-inverse navbar-fixed-top" role="navigation">
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
