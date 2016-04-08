@@ -18,7 +18,7 @@ Colors:
 
 @import url(http://fonts.googleapis.com/css?family=Lobster);
 @import url(http://fonts.googleapis.com/css?family=Exo);
-
+<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Lemon" />
 /***************** reset *****************/
 body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,
 pre,form,fieldset,input,textarea,p,blockquote
@@ -38,7 +38,7 @@ textarea { resize: none }
 
 /* header */
 header{background: rgba(247,247,247,1)}
-.logo{font-family: 'Gadget', cursive; font-size:40px; color:#606060}
+.logo{font-family: Lemon, cursive; font-size:40px; color:#606060}
 .logo .blue{color:#2980B9}
 header ul li{float: left;padding:12px 5px;position: relative}
 header ul li a{padding:15px 10px;color: #747475; text-decoration: none}
