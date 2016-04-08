@@ -44,6 +44,8 @@
             <li><a href="#" id="T6">Regina Doherty TD (@ReginaDo) </a></li>
         </ul>
     </div>
+    <br>
+    <br>
     <div class="col-md-9 well admin-content" id="outer3" hidden>
         <pre id="p3" hidden></pre>
         <br>

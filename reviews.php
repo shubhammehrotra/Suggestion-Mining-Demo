@@ -35,7 +35,6 @@
                 <li class="active"><a data-toggle="tab" href="#product">Product Reviews</a></li>
                 <li><a data-toggle="tab" href="#hotel">Hotel Reviews</a></li>
             </ul>
-
             <div class="tab-content">
                 <div id="product" class="tab-pane fade in active">
                     <ul class="nav nav-pills nav-stacked admin-menu " id="list1">
@@ -61,7 +60,10 @@
         </div>
 
     </div>
+    <br>
+    <br>
     <div class="col-md-9 well admin-content" id="outer1" hidden>
+
         <pre id="p1" hidden></pre>
         <br>
         <br>
@@ -194,7 +196,8 @@
             d3.select("#graphic").style("opacity", newOpacity);
             graphic.active = active;*/
             //$('#p4').hide();
-        });$('#list2').on('click', 'li', function () {
+        });
+        $('#list2').on('click', 'li', function () {
             $('#outer1').show();
             var s = d3.select("#p6").selectAll('#graphic').remove();
             var clicked = $(this).text();

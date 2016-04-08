@@ -42,6 +42,8 @@
             <li><a href="#" id="D6">Guns</a></li>
         </ul>
     </div>
+    <br>
+    <br>
     <div class="col-md-9 well admin-content" id="outer2" hidden>
         <pre id="p2" hidden></pre>
         <br>
