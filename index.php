@@ -8,15 +8,15 @@
         <ul class="nav nav-pills nav-stacked admin-menu ">
             <li><a><b>Suggestion Extraction Techniques</a></b>
             </li>
-            <li class="active"><a href="#" data-target-id="SVM">Support Vector Machines</a></li>
-            <li><a href="nn.php" data-target-id="NN">Deep Learning</a></li>
+            <li class = "active"> <a href="#" data-target-id="NN">Deep Learning</a></li>
+            <li><a href="svm.php" data-target-id="SVM">Support Vector Machines</a></li>
             <li><a href="RuleBased.php" data-target-id="RB">Rule Based</a></li>
         </ul>
     </div>
     <!-- Support Vector Machines-->
     <div class="col-md-9 well admin-content" id="SVM">
         <p>
-            Enter text:
+            Enter text. An example text is already provided:
         </p>
         <div class="row">
 
@@ -102,7 +102,7 @@
                 $("#sendJson").hide();
                 //alert(jsonValue);
                 // We form the request url
-                var jsonUrl = "http://140.203.155.226:8080/suggest-webservice/api/suggest/getSuggestions?json=" + escape(jsonValue);
+                var jsonUrl = "http://140.203.155.226:8080/miso/rest/suggest/getSuggestions?json=" + escape(jsonValue);
                 // send the request
                 $.ajax({
                     type: 'GET',
