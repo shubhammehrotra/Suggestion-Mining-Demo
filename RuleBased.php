@@ -7,8 +7,8 @@
         <ul class="nav nav-pills nav-stacked admin-menu ">
             <li><a><b>Suggestion Extraction Techniques</a></b>
             </li>
-            <li><a href="index.php" data-target-id="SVM">Support Vector Machines</a></li>
-            <li><a href="nn.php" data-target-id="NN">Deep Learning</a></li>
+            <li><a href="index.php" data-target-id="NN">Deep Learning</a></li>
+            <li><a href="svm.php" data-target-id="SVM">Support Vector Machines</a></li>
             <li class="active"><a href="RuleBased.php" data-target-id="RB">Rule Based</a></li>
         </ul>
     </div>
