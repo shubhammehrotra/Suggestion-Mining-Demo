@@ -248,7 +248,9 @@
                     .on("click", function (d) {
                         $('#p1').hide();
                         $('#pr6').show();
-                        if (d.name == "animate"){
+                        if (d.name == "Topic 1"){
+                            //url + topic 1.txt;
+                            //url = something something + electronics + topic1.txt
                             $('#pr6').text("Suggestions to be shown for the topic : " + d.name);    
                         }else {
                             $('#pr6').text("To be added");
