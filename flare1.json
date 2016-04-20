@@ -1,0 +1,140 @@
+{
+    "name": "flare",
+    "children": [
+        {
+            "name": "Topic 1",
+            "children": [
+                {
+                    "name": "Arrays",
+                    "size": 8258
+                },
+                {
+                    "name": "Colors",
+                    "size": 10001
+                },
+                {
+                    "name": "Dates",
+                    "size": 8217
+                },
+                {
+                    "name": "Displays",
+                    "size": 12555
+                },
+                {
+                    "name": "Filter",
+                    "size": 2324
+                },
+                {
+                    "name": "Geometry",
+                    "size": 10993
+                },
+                {
+                    "name": "IEvaluable",
+                    "size": 335
+                },
+                {
+                    "name": "IPredicate",
+                    "size": 383
+                },
+                {
+                    "name": "IValueProxy",
+                    "size": 874
+                },
+                {
+                    "name": "Maths",
+                    "size": 17705
+                }
+   ]
+  },
+        {
+            "name": "Topic 2",
+            "children": [
+                {
+                    "name": "Arrays",
+                    "size": 8258
+                },
+                {
+                    "name": "Colors",
+                    "size": 10001
+                },
+                {
+                    "name": "Dates",
+                    "size": 8217
+                },
+                {
+                    "name": "Displays",
+                    "size": 12555
+                },
+                {
+                    "name": "Filter",
+                    "size": 2324
+                },
+                {
+                    "name": "Geometry",
+                    "size": 10993
+                },
+                {
+                    "name": "IEvaluable",
+                    "size": 335
+                },
+                {
+                    "name": "IPredicate",
+                    "size": 383
+                },
+                {
+                    "name": "IValueProxy",
+                    "size": 874
+                },
+                {
+                    "name": "Maths",
+                    "size": 17705
+                }
+   ]
+  },
+        {
+            "name": "Topic 3",
+            "children": [
+                {
+                    "name": "Arrays",
+                    "size": 8258
+                },
+                {
+                    "name": "Colors",
+                    "size": 10001
+                },
+                {
+                    "name": "Dates",
+                    "size": 8217
+                },
+                {
+                    "name": "Displays",
+                    "size": 12555
+                },
+                {
+                    "name": "Filter",
+                    "size": 2324
+                },
+                {
+                    "name": "Geometry",
+                    "size": 10993
+                },
+                {
+                    "name": "IEvaluable",
+                    "size": 335
+                },
+                {
+                    "name": "IPredicate",
+                    "size": 383
+                },
+                {
+                    "name": "IValueProxy",
+                    "size": 874
+                },
+                {
+                    "name": "Maths",
+                    "size": 17705
+                }
+   ]
+  }
+ ]
+}

@@ -106,7 +106,7 @@
                 .append("g")
                 .attr("transform", "translate(" + diameter / 2 + "," + diameter / 2 + ")")
                 .attr("id", "graphic");
-            d3.json("flare.json", function (error, root) {
+            d3.json("flare1.json", function (error, root) {
                 if (error) throw error;
 
                 var focus = root,
@@ -229,7 +229,7 @@
                 .append("g")
                 .attr("transform", "translate(" + diameter / 2 + "," + diameter / 2 + ")")
                 .attr("id", "graphic");
-            d3.json("flare.json", function (error, root) {
+            d3.json("flare1.json", function (error, root) {
                 if (error) throw error;
 
                 var focus = root,
@@ -248,7 +248,12 @@
                     .on("click", function (d) {
                         $('#p1').hide();
                         $('#pr6').show();
-                        $('#pr6').text("Suggestions to be shown for the topic : " + d.name);
+                        if (d.name == "animate"){
+                            $('#pr6').text("Suggestions to be shown for the topic : " + d.name);    
+                        }else {
+                            $('#pr6').text("To be added");
+                        }
+                        
                         if (focus !== d) zoom(d), d3.event.stopPropagation();
                     });
 

@@ -51,7 +51,7 @@
 		<input type="radio" name="textSource" value="general" id="ge"> General 
 		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 		<input type="radio" name="language" value="en" id="en"> English 
-		<input type="radio" name="language" value="es" id="es"> Spanish  
+		<input type="radio" name="language" value="es" id="es"> Sanish  
 
 	</div>
 	<br>-->
