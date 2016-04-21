@@ -80,7 +80,7 @@
             var clicked = $(this).text();
             check = 1;
             //alert(clicked);
-            $('#p1').show();
+            //$('#p1').show();
             $('#p6').show();
             $('#pr6').hide();
             document.getElementById("p6").innerHTML = "";
@@ -203,7 +203,7 @@
             var clicked = $(this).text();
             check = 1;
             //alert(clicked);
-            $('#p1').show();
+            //$('#p1').show();
             $('#p6').show();
             $('#pr6').hide();
             document.getElementById("p6").innerHTML = "";
@@ -248,15 +248,27 @@
                     .on("click", function (d) {
                         $('#p1').hide();
                         $('#pr6').show();
-                        if (d.name == "Topic 1"){
-                            //url + topic 1.txt;
-                            //url = something something + electronics + topic1.txt
-                            $('#pr6').text("Suggestions to be shown for the topic : " + d.name);    
-                        }else {
-                            $('#pr6').text("To be added");
-                        }
-                        
                         if (focus !== d) zoom(d), d3.event.stopPropagation();
+                        var jsonUrl1 = "enter server address here" + d.name + " Sentence.txt";
+                        $.ajax({
+                            type: 'GET',
+                            url: "inc/get.php",
+                            data: {
+                                "url": jsonUrl1
+                            },
+                            success: function (response) {
+                                // Showing the result after using REGEX to clean it
+                                if (response == "") {
+                                    $('#pr6').text("Sorry !");
+                                } else {
+                                    $('#pr6').text(response);
+                                }
+                            },
+                            error: function (XMLHttpRequest, textStatus, errorThrown) {
+                                // Showing an error message if an error occured
+                                $('#pr6').text(errorThrown);
+                            }
+                        });
                     });
 
                 var text = svg.selectAll("text")

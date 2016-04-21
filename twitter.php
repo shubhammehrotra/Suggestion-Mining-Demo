@@ -63,7 +63,7 @@
             var clicked = $(this).text();
             check = 1;
             //alert(clicked);
-            $('#p3').show();
+           // $('#p3').show();
             $('#p4').show();
             document.getElementById("p4").innerHTML = "";
             $('#pr4').hide();
@@ -90,7 +90,7 @@
                 .append("g")
                 .attr("transform", "translate(" + diameter / 2 + "," + diameter / 2 + ")")
                 .attr("id", "graphic");
-            d3.json("flare.json", function (error, root) {
+            d3.json("flare1.json", function (error, root) {
                 if (error) throw error;
 
                 var focus = root,
