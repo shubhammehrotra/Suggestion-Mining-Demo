@@ -123,9 +123,19 @@
                         return d.children ? color(4.3) : null;
                     })
                     .on("click", function (d) {
+                        var name = d.name;
                         $('#p1').hide();
                         $('#pr6').show();
-                        $('#pr6').text("Suggestions to be shown for the topic : " + d.name);
+                        jQuery.get('Sentences/' + name + ' Sentence.txt', function (data) {
+                            //alert(data);
+                            //process text file line by line
+                            $('#div').html(data.replace('n', ''));
+                            $("#pr6").text(data);
+                        });
+
+
+
+                        //$('#pr6').text("Suggestions to be shown for the topic : " + d.name);
                         if (focus !== d) zoom(d), d3.event.stopPropagation();
                     });
 
