@@ -11,50 +11,41 @@
                 </div>
                 <div class="panel-body">
                     <ul>
+                     <li> API call for our deep learning based (best performing) suggestion detector: 
+                        <pre> http://140.203.155.226:8080/miso/rest/suggest/getSuggestions?json=</pre>
+                        </li>
+                        
                         <li><b>Input:</b> 
                             <br>
-                            The API accepts text in a json format. Example of json input:
+                            The API accepts input in a json format. It has three fields, which represent the input text, 
+                            source of the text ("twitter" or "general"), and the language (only "en" currently)
+                            . Example of json input:
                                                 <pre>
 {
-    "http://dbpedia.org/ontology/Place": [
-        {"http://dbpedia.org/resource/Ouarzazate":10.3109364745519},
-        {"http://dbpedia.org/resource/Cinema_of_the_United_States ":5.60468931340941},
-        {"http://dbpedia.org/resource/East_Ayrshire":5.32881528327248},
-        {"http://dbpedia.org/resource/Paradise,_Nevada":5.16277001359725},
-        {"http://dbpedia.org/resource/New_Orleans":5.05640134500144}
-    ],
-    "http://dbpedia.org/ontology/Other Concepts": [
-        {"http://dbpedia.org/resource/Academy_Award_for_Best_Actor":22.2152593507837},
-        {"http://dbpedia.org/resource/Deadline.com":20.6511115302264}
-    ]
+    "text": 
+        "This is a fabulous hotel. The breakfasts are great - fresh fruit bagels, muffins, hot eggs and sausage etc. 
+        Just around the corner from the hotel is a fabulous little Italian restaurant - Bon Amici, I highly recommend it.",
+    "textSource": "general",
+        "language": "en"
+        }
 }
-</pre>
-
-                        </li>
-                        <li> API call: 
-                        <pre> http://monnet01.sindice.net:8080/enrg/api/enrg/json?entity=</pre>
-                        </li>
-                        <li><b>Output: </b>Gets the results in a json format.
-                            <br> 
-                        </li>
-                    </ul>
-
+</pre>                
+</li>
+<li><b>Output:</b> 
+                            <br>
+                    
+                    The output json provides an array of sentences which are detected as suggestions. 
                     Example of output json:
                     <pre>
 {
-    "http://dbpedia.org/ontology/Place": [
-        {"http://dbpedia.org/resource/Ouarzazate":10.3109364745519},
-        {"http://dbpedia.org/resource/Cinema_of_the_United_States ":5.60468931340941},
-        {"http://dbpedia.org/resource/East_Ayrshire":5.32881528327248},
-        {"http://dbpedia.org/resource/Paradise,_Nevada":5.16277001359725},
-        {"http://dbpedia.org/resource/New_Orleans":5.05640134500144}
-    ],
-    "http://dbpedia.org/ontology/Other Concepts": [
-        {"http://dbpedia.org/resource/Academy_Award_for_Best_Actor":22.2152593507837},
-        {"http://dbpedia.org/resource/Deadline.com":20.6511115302264}
+    "result": [
+        "Just around the corner from the hotel is a fabulous little Italian restaurant - Bon Amici, I highly recommend it.",
     ]
 }
 </pre>
+</li>
+                    </ul>
+
 
                 </div>
             </div>
