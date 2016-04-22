@@ -30,6 +30,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="pre.css">
     <div class="col-md-3">
         <ul class="nav nav-pills nav-stacked admin-menu " id="list2">
             <li><a><b>Debate Topics</a></b>
@@ -89,7 +90,7 @@
                 .append("g")
                 .attr("transform", "translate(" + diameter / 2 + "," + diameter / 2 + ")")
                 .attr("id", "graphic");
-            d3.json("flare1.json", function (error, root) {
+            d3.json("flare2.json", function (error, root) {
                 if (error) throw error;
 
                 var focus = root,
@@ -109,8 +110,18 @@
                         var z = d.name;
                         $('#p2').hide();
                         $('#pr5').show();
-                        $('#pr5').text("Suggestions to be shown for the topic : " + z);
+                        //$('#pr5').text("Suggestions to be shown for the topic : " + z);
                         console.log(d.name);
+                        var fileName = 'Sentences/Healthcare/' + d.name + ' Sentence.txt';
+                        //alert(fileName);
+                        jQuery.get(fileName, function (data) {
+                            //alert(data);
+                            //process text file line by line
+                            // alet
+                            //alert(data)
+                            //alert(data);
+                            $("#pr5").text(data);
+                        });
                         if (focus !== d) zoom(d), d3.event.stopPropagation();
                     });
 

@@ -1,0 +1,455 @@
+{
+    "name": "flare",
+    "children": [
+        {
+            "name": "Topic 1",
+            "children": [
+                {
+                    "name": "Online Library",
+                    "size": 8258
+                },
+                {
+                    "name": "love ebook reader",
+                    "size": 10001
+                },
+                {
+                    "name": "first page",
+                    "size": 8217
+                },
+                {
+                    "name": "excellent product",
+                    "size": 12555
+                },
+                {
+                    "name": "wifi access",
+                    "size": 2324
+                },
+                {
+                    "name": "perfect ebook reader",
+                    "size": 10993
+                },
+                {
+                    "name": "reading app",
+                    "size": 335
+                },
+                {
+                    "name": "reading one",
+                    "size": 383
+                },
+                {
+                    "name": "library card",
+                    "size": 874
+                },
+                {
+                    "name": "ebook store",
+                    "size": 17705
+                }
+   ]
+  },
+        {
+            "name": "Topic 2",
+            "children": [
+                {
+                    "name": "buy one",
+                    "size": 8258
+                },
+                {
+                    "name": "function well",
+                    "size": 10001
+                },
+                {
+                    "name": "business",
+                    "size": 8217
+                },
+                {
+                    "name": "credit card company",
+                    "size": 12555
+                },
+                {
+                    "name": "rubber",
+                    "size": 2324
+                },
+                {
+                    "name": "card slot",
+                    "size": 10993
+                },
+                {
+                    "name": "pocket",
+                    "size": 335
+                },
+                {
+                    "name": "settings",
+                    "size": 383
+                },
+                {
+                    "name": "feels great",
+                    "size": 874
+                },
+                {
+                    "name": "nice hardware",
+                    "size": 17705
+                }
+   ]
+  },
+        {
+            "name": "Topic 3",
+            "children": [
+                {
+                    "name": "noble nook simple touch",
+                    "size": 8258
+                },
+                {
+                    "name": "library books",
+                    "size": 10001
+                },
+                {
+                    "name": "nook simple touch reader",
+                    "size": 8217
+                },
+                {
+                    "name": "amazon kindle ",
+                    "size": 12555
+                },
+                {
+                    "name": "noble books ",
+                    "size": 2324
+                },
+                {
+                    "name": "read kindle books ",
+                    "size": 10993
+                },
+                {
+                    "name": "nook simple touch e-reader ",
+                    "size": 335
+                },
+                {
+                    "name": "screen ",
+                    "size": 383
+                },
+                {
+                    "name": "pdf books ",
+                    "size": 874
+                },
+                {
+                    "name": "return books ",
+                    "size": 17705
+                }
+   ]
+  },
+        {
+            "name": "Topic 4",
+            "children": [
+                {
+                    "name": "pdf documents ",
+                    "size": 8258
+                },
+                {
+                    "name": "keyboard works well ",
+                    "size": 10001
+                },
+                {
+                    "name": "excellent purchase ",
+                    "size": 8217
+                },
+                {
+                    "name": "size options",
+                    "size": 12555
+                },
+                {
+                    "name": "wi-fi devices",
+                    "size": 2324
+                },
+                {
+                    "name": "apps",
+                    "size": 10993
+                },
+                {
+                    "name": "memory size",
+                    "size": 335
+                },
+                {
+                    "name": "color e-reader ",
+                    "size": 383
+                },
+                {
+                    "name": "one year warranty ",
+                    "size": 874
+                },
+                {
+                    "name": "spent hours",
+                    "size": 17705
+                }
+   ]
+  },
+        {
+            "name": "Topic 5",
+            "children": [
+                {
+                    "name": "kindle touch ",
+                    "size": 8258
+                },
+                {
+                    "name": "kindle package",
+                    "size": 10001
+                },
+                {
+                    "name": "kindle broke",
+                    "size": 8217
+                },
+                {
+                    "name": "kindle paperwhite ",
+                    "size": 12555
+                },
+                {
+                    "name": "kindle system ",
+                    "size": 2324
+                },
+                {
+                    "name": "light device",
+                    "size": 10993
+                },
+                {
+                    "name": "kobo device ",
+                    "size": 335
+                },
+                {
+                    "name": "useless device ",
+                    "size": 383
+                },
+                {
+                    "name": "excellent device",
+                    "size": 874
+                },
+                {
+                    "name": "kindle reading app ",
+                    "size": 17705
+                }
+   ]
+  },
+        {
+            "name": "Topic 6",
+            "children": [
+                {
+                    "name": "case cover ",
+                    "size": 8258
+                },
+                {
+                    "name": "need internet",
+                    "size": 10001
+                },
+                {
+                    "name": "wi-fi ",
+                    "size": 8217
+                },
+                {
+                    "name": "days return policy ",
+                    "size": 12555
+                },
+                {
+                    "name": "excellent side button",
+                    "size": 2324
+                },
+                {
+                    "name": "perfect size ",
+                    "size": 10993
+                },
+                {
+                    "name": "great battery life ",
+                    "size": 335
+                },
+                {
+                    "name": "everything online ",
+                    "size": 383
+                },
+                {
+                    "name": "interface",
+                    "size": 874
+                },
+                {
+                    "name": "cover ",
+                    "size": 17705
+                }
+   ]
+  },
+        {
+            "name": "Topic 7",
+            "children": [
+                {
+                    "name": "get home ",
+                    "size": 8258
+                },
+                {
+                    "name": "shelves option ",
+                    "size": 10001
+                },
+                {
+                    "name": "android market ",
+                    "size": 8217
+                },
+                {
+                    "name": "excellent seller ",
+                    "size": 12555
+                },
+                {
+                    "name": "great browser ",
+                    "size": 2324
+                },
+                {
+                    "name": "need apps ",
+                    "size": 10993
+                },
+                {
+                    "name": "button ",
+                    "size": 335
+                },
+                {
+                    "name": "easy touch ",
+                    "size": 383
+                },
+                {
+                    "name": "download apps ",
+                    "size": 874
+                },
+                {
+                    "name": "simple features ",
+                    "size": 17705
+                }
+   ]
+  },
+        {
+            "name": "Topic 8",
+            "children": [
+                {
+                    "name": "light ",
+                    "size": 8258
+                },
+                {
+                    "name": "one star ",
+                    "size": 10001
+                },
+                {
+                    "name": "comparison",
+                    "size": 8217
+                },
+                {
+                    "name": "e-readers",
+                    "size": 12555
+                },
+                {
+                    "name": "format ",
+                    "size": 2324
+                },
+                {
+                    "name": "functionality",
+                    "size": 10993
+                },
+                {
+                    "name": "light touch ",
+                    "size": 335
+                },
+                {
+                    "name": "decision ",
+                    "size": 383
+                },
+                {
+                    "name": "charger cord ",
+                    "size": 874
+                },
+                {
+                    "name": "service states ",
+                    "size": 17705
+                }
+   ]
+  },
+        {
+            "name": "Topic 9",
+            "children": [
+                {
+                    "name": "nook ereader ",
+                    "size": 8258
+                },
+                {
+                    "name": "nook reader ",
+                    "size": 10001
+                },
+                {
+                    "name": "nook thing",
+                    "size": 8217
+                },
+                {
+                    "name": "nook wifi ",
+                    "size": 12555
+                },
+                {
+                    "name": "nook battery ",
+                    "size": 2324
+                },
+                {
+                    "name": "nook store ",
+                    "size": 10993
+                },
+                {
+                    "name": "nook ebooks",
+                    "size": 335
+                },
+                {
+                    "name": "nook works",
+                    "size": 383
+                },
+                {
+                    "name": "nook tablet ",
+                    "size": 874
+                },
+                {
+                    "name": "nook cover",
+                    "size": 17705
+                }
+   ]
+  },
+        {
+            "name": "Topic 10",
+            "children": [
+                {
+                    "name": "screen ca",
+                    "size": 8258
+                },
+                {
+                    "name": "touch screen ",
+                    "size": 10001
+                },
+                {
+                    "name": "kindle simple touch  ",
+                    "size": 8217
+                },
+                {
+                    "name": "screen makes",
+                    "size": 12555
+                },
+                {
+                    "name": "reading page ",
+                    "size": 2324
+                },
+                {
+                    "name": "page",
+                    "size": 10993
+                },
+                {
+                    "name": "library ",
+                    "size": 335
+                },
+                {
+                    "name": "battery problem ",
+                    "size": 383
+                },
+                {
+                    "name": "night time reading",
+                    "size": 874
+                },
+                {
+                    "name": "amazon gift ",
+                    "size": 17705
+                }
+   ]
+  }
+ ]
+}

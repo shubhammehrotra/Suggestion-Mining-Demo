@@ -128,7 +128,7 @@
                         $('#p1').hide();
                         $('#pr6').show();
                         if (focus !== d) zoom(d), d3.event.stopPropagation();
-                        var fileName = 'Sentences/' + d.name + ' Sentence.txt';
+                        var fileName = 'Sentences/Nook/' + d.name + ' Sentence.txt';
                         //alert(fileName);
                         jQuery.get(fileName, function (data) {
                             //alert(data);
