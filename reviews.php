@@ -39,7 +39,7 @@
             <div class="tab-content">
                 <div id="product" class="tab-pane fade in active">
                     <ul class="nav nav-pills nav-stacked admin-menu " id="list1">
-                        <li><a href="#" id="Pr1">Product 1</a></li>
+                        <li><a href="#" id="Pr1">Nook Ebook Reader</a></li>
                         <li><a href="#" id="P2">Product 2</a></li>
                         <li><a href="#" id="P3">Product 3</a></li>
                         <li><a href="#" id="P4">Product 4</a></li>
@@ -99,7 +99,7 @@
                 .size([diameter - margin, diameter - margin])
                 .value(function (d) {
                     return d.size;
-                })
+                });
 
             var svg = d3.select("#p6").append("svg")
                 .attr("width", diameter)
@@ -128,11 +128,14 @@
                         $('#p1').hide();
                         $('#pr6').show();
                         if (focus !== d) zoom(d), d3.event.stopPropagation();
-                        jQuery.get('Sentences/' + d.name + ' Sentence.txt', function (data) {
+                        var fileName = 'Sentences/' + d.name + ' Sentence.txt';
+                        //alert(fileName);
+                        jQuery.get(fileName, function (data) {
                             //alert(data);
                             //process text file line by line
                            // alet
                             //alert(data)
+                            //alert(data);
                             $("#pr6").text(data);
                         });
                         //$('#pr6').text("Suggestions to be shown for the topic : " + d.name);
