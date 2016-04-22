@@ -29,6 +29,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="pre.css">
     <div class="col-md-3">
         <div class="container">
             <ul class="nav nav-tabs">
@@ -126,17 +127,16 @@
                         var name = d.name;
                         $('#p1').hide();
                         $('#pr6').show();
-                        jQuery.get('Sentences/' + name + ' Sentence.txt', function (data) {
+                        if (focus !== d) zoom(d), d3.event.stopPropagation();
+                        jQuery.get('Sentences/' + d.name + ' Sentence.txt', function (data) {
                             //alert(data);
                             //process text file line by line
-                            $('#div').html(data.replace('n', ''));
+                           // alet
+                            //alert(data)
                             $("#pr6").text(data);
                         });
-
-
-
                         //$('#pr6').text("Suggestions to be shown for the topic : " + d.name);
-                        if (focus !== d) zoom(d), d3.event.stopPropagation();
+                        
                     });
 
                 var text = svg.selectAll("text")

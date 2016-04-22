@@ -1,0 +1,8 @@
+pre {
+    height: auto;
+    max-height: 400px;
+    /*overflow: auto;*/
+    /*word-break: normal !important;
+    word-wrap: normal !important;
+    white-space: pre !important;*/
+}
