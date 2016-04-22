@@ -32,6 +32,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="pre.css">
     <div class="col-md-3">
         <ul class="nav nav-pills nav-stacked admin-menu " id="list3">
             <li><a><b>Politicians' Twitter Handles</a></b>
@@ -63,7 +64,7 @@
             var clicked = $(this).text();
             check = 1;
             //alert(clicked);
-           // $('#p3').show();
+            // $('#p3').show();
             $('#p4').show();
             document.getElementById("p4").innerHTML = "";
             $('#pr4').hide();
@@ -109,7 +110,16 @@
                     .on("click", function (d) {
                         $('#p3').hide();
                         $('#pr4').show();
-                        $('#pr4').text("Suggestions to be shown for topic: " + d.name);
+                        //$('#pr4').text("Suggestions to be shown for topic: " + d.name);
+                        var fileName = 'Sentences/Tweets/' + d.name + ' Sentence.txt';
+                        jQuery.get(fileName, function (data) {
+                            //alert(data);
+                            //process text file line by line
+                            // alet
+                            //alert(data)
+                            //alert(data);
+                            $("#pr4").text(data);
+                        });
                         if (focus !== d) zoom(d), d3.event.stopPropagation();
                     });
 

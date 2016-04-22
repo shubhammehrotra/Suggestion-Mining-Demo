@@ -111,7 +111,6 @@
                         $('#p2').hide();
                         $('#pr5').show();
                         //$('#pr5').text("Suggestions to be shown for the topic : " + z);
-                        console.log(d.name);
                         var fileName = 'Sentences/Healthcare/' + d.name + ' Sentence.txt';
                         //alert(fileName);
                         jQuery.get(fileName, function (data) {
