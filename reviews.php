@@ -25,6 +25,7 @@
             pointer-events: none;
         }
     </style>
+    
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
@@ -39,12 +40,11 @@
             <div class="tab-content">
                 <div id="product" class="tab-pane fade in active">
                     <ul class="nav nav-pills nav-stacked admin-menu " id="list1">
+
                         <li><a href="#" id="Pr1">Nook Ebook Reader</a></li>
                         <li><a href="#" id="P2">Product 2</a></li>
                         <li><a href="#" id="P3">Product 3</a></li>
                         <li><a href="#" id="P4">Product 4</a></li>
-                        <li><a href="#" id="P5">Product 5</a></li>
-                        <li><a href="#" id="Pr6">Product 6</a></li>
                     </ul>
                 </div>
                 <div id="hotel" class="tab-pane fade">
@@ -53,8 +53,6 @@
                         <li><a href="#" id="P2">Hotel 2</a></li>
                         <li><a href="#" id="P3">Hotel 3</a></li>
                         <li><a href="#" id="P4">Hotel 4</a></li>
-                        <li><a href="#" id="P5">Hotel 5</a></li>
-                        <li><a href="#" id="Pr6">Hotel 6</a></li>
                     </ul>
                 </div>
             </div>
@@ -64,7 +62,11 @@
     <br>
     <br>
     <div class="col-md-9 well admin-content" id="outer1" hidden>
-
+     <p style="color:#1D4087;">
+            The suggestions are clustered according to the constituent key-phrases. 
+      </p>      
+      <p style="color:#1D4087;"> Click on a cluster to view the related suggestions. Click again to return to the full view.
+            </p>
         <pre id="p1" hidden></pre>
         <br>
         <br>

@@ -35,17 +35,22 @@
         <ul class="nav nav-pills nav-stacked admin-menu " id="list2">
             <li><a><b>Debate Topics</a></b>
             </li>
+            <li><a href="#" id="D5">Healthcare</a></li>
             <li><a href="#" id="D1">Abortion</a></li>
             <li><a href="#" id="D2">Creation</a></li>
             <li><a href="#" id="D3">Gay Rights</a></li>
             <li><a href="#" id="D4">God</a></li>
-            <li><a href="#" id="D5">Healthcare</a></li>
             <li><a href="#" id="D6">Guns</a></li>
         </ul>
     </div>
     <br>
     <br>
     <div class="col-md-9 well admin-content" id="outer2" hidden>
+         <p style="color:#1D4087;">
+            The suggestions are clustered according to the constituent key-phrases. 
+      </p>      
+      <p style="color:#1D4087;"> Click on a cluster to view the related suggestions. Click again to return to the full view.
+            </p>
         <pre id="p2" hidden></pre>
         <br>
         <br>
