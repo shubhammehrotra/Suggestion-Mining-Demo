@@ -48,6 +48,11 @@
     <br>
     <br>
     <div class="col-md-9 well admin-content" id="outer3" hidden>
+        <p style="color:#1D4087;">
+            The suggestions are clustered according to the constituent key-phrases.
+        </p>
+        <p style="color:#1D4087;"> Click on a cluster to view the related suggestions. Click again to return to the full view.
+        </p>
         <pre id="p3" hidden></pre>
         <br>
         <br>
@@ -91,7 +96,7 @@
                 .append("g")
                 .attr("transform", "translate(" + diameter / 2 + "," + diameter / 2 + ")")
                 .attr("id", "graphic");
-            d3.json("flare1.json", function (error, root) {
+            d3.json("flare3.json", function (error, root) {
                 if (error) throw error;
 
                 var focus = root,

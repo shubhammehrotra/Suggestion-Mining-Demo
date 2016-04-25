@@ -47,7 +47,7 @@
                      <!--   <ul class="dropdown-menu" id> -->
                             <li><a href="reviews.php">Online Reviews</a></li>
                             <li><a href="debates.php">Debates</a></li>
-                            <li><a href="twitter.php">Twitter Data</a></li>
+                            <li><a href="twitter.php">Tweets</a></li>
                         </ul>         
                     </li>
                 </ul>

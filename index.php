@@ -22,7 +22,7 @@
 
             <form id="theForm" enctype='application/json' onsubmit="event.preventDefault();">
                 <div class="col-sm-9">
-                    <textarea class="form-control" rows="5" id="mainText1" value name="text" type="text">This is a fabulous hotel. The breakfasts are great - fresh fruit bagels, muffins, hot eggs and sausage etc. Just around the corner from the hotel is a fabulous little Italian restaurant - Bon Amici. I highly recommend it. </textarea>
+                    <textarea class="form-control" rows="5" id="mainText1" value name="text" type="text">This is a fabulous hotel. The breakfasts are great - fresh fruit bagels, muffins, hot eggs and sausage etc. Note, the room can only accommodate two people who are close. Do not expect your family of four to be comfortable in one room. I highly recommend the fabulous little Italian restaurant just around the corner from the hotel, Bon Amici. I will stay at this hotel everytime I come to New York. </textarea>
                     <!--<input id="mainText1" name="text" type="text" class="form-control" value="This is a fabulous hotel.The breakfasts are great - fresh fruit  bagels, muffins, hot eggs and sausage etc.Just around the corner from the hotel is a fabulous little Italian restaurant - Bon Amici.I highly recommend it.">
                     <input id="mainText2" name="text" type="hidden" class="form-control" placeholder="Select the Language and Text Source for Suggestion Extraction" autofocus="autofocus">-->
                 </div>

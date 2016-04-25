@@ -25,7 +25,7 @@
             pointer-events: none;
         }
     </style>
-    
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
@@ -62,11 +62,11 @@
     <br>
     <br>
     <div class="col-md-9 well admin-content" id="outer1" hidden>
-     <p style="color:#1D4087;">
-            The suggestions are clustered according to the constituent key-phrases. 
-      </p>      
-      <p style="color:#1D4087;"> Click on a cluster to view the related suggestions. Click again to return to the full view.
-            </p>
+        <p style="color:#1D4087;">
+            The suggestions are clustered according to the constituent key-phrases.
+        </p>
+        <p style="color:#1D4087;"> Click on a cluster to view the related suggestions. Click again to return to the full view.
+        </p>
         <pre id="p1" hidden></pre>
         <br>
         <br>
@@ -135,13 +135,13 @@
                         jQuery.get(fileName, function (data) {
                             //alert(data);
                             //process text file line by line
-                           // alet
+                            // alet
                             //alert(data)
                             //alert(data);
                             $("#pr6").text(data);
                         });
                         //$('#pr6').text("Suggestions to be shown for the topic : " + d.name);
-                        
+
                     });
 
                 var text = svg.selectAll("text")

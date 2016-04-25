@@ -46,11 +46,11 @@
     <br>
     <br>
     <div class="col-md-9 well admin-content" id="outer2" hidden>
-         <p style="color:#1D4087;">
-            The suggestions are clustered according to the constituent key-phrases. 
-      </p>      
-      <p style="color:#1D4087;"> Click on a cluster to view the related suggestions. Click again to return to the full view.
-            </p>
+        <p style="color:#1D4087;">
+            The suggestions are clustered according to the constituent key-phrases.
+        </p>
+        <p style="color:#1D4087;"> Click on a cluster to view the related suggestions. Click again to return to the full view.
+        </p>
         <pre id="p2" hidden></pre>
         <br>
         <br>

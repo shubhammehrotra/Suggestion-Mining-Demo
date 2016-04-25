@@ -14,14 +14,14 @@
     </div>
     <div class="col-md-9 well admin-content" id="RB">
         <p>
-            Please enter text in the space provided below :
+            Enter text. An example text is already provided:
         </p>
 
         <div class="row">
 
             <form id="theForm1" onsubmit="event.preventDefault();" enctype="text/plain">
                 <div class="col-sm-9">
-                    <textarea class="form-control" rows="5" id="mainText1" value name = "text" type = "text">This is a fabulous hotel. The breakfasts are great - fresh fruit  bagels, muffins, hot eggs and sausage etc. Just around the corner from the hotel is a fabulous little Italian restaurant - Bon Amici. I highly recommend it.</textarea>
+                    <textarea class="form-control" rows="5" id="mainText1" value name = "text" type = "text">This is a fabulous hotel. The breakfasts are great - fresh fruit bagels, muffins, hot eggs and sausage etc. Note, the room can only accommodate two people who are close. Do not expect your family of four to be comfortable in one room. I highly recommend the fabulous little Italian restaurant just around the corner from the hotel, Bon Amici. I will stay at this hotel everytime I come to New York. </textarea>
                     <!--<input id="mainText1" name="text" type="text" class="form-control" value="This is a fabulous hotel. The breakfasts are great - fresh fruit  bagels, muffins, hot eggs and sausage etc. Just around the corner from the hotel is a fabulous little Italian restaurant - Bon Amici. I highly recommend it. ">
                     <input id="mainText2" name="text" type="hidden" class="form-control" placeholder="Select the Language and Text Source for Suggestion Extraction" autofocus="autofocus">-->
                 </div>
@@ -67,7 +67,7 @@
                 $("#image").show();
                 $("#sendJson1").hide();
                 // We form the request url
-                var jsonUrl1 = "http://localhost:8080/RuleBasedSuggestionClassifier/webapi/check/" + encodeURIComponent(jsonValue)
+                var jsonUrl1 = "http://140.203.155.226:8080/RBS_Shubhi/webapi/check/" + encodeURIComponent(jsonValue)
                 $.ajax({
                     type: 'GET',
                     url: "inc/get.php",
