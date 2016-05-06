@@ -21,7 +21,7 @@
 
             <form id="theForm1" onsubmit="event.preventDefault();" enctype="text/plain">
                 <div class="col-sm-9">
-                    <textarea class="form-control" rows="5" id="mainText1" value name = "text" type = "text">This is a fabulous hotel. The breakfasts are great - fresh fruit bagels, muffins, hot eggs and sausage etc. Note, the room can only accommodate two people who are close. Do not expect your family of four to be comfortable in one room. I highly recommend the fabulous little Italian restaurant just around the corner from the hotel, Bon Amici. I will stay at this hotel everytime I come to New York. </textarea>
+                    <textarea class="form-control" rows="5" id="mainText1" value name="text" type="text">This is a fabulous hotel. The breakfasts are great - fresh fruit bagels, muffins, hot eggs and sausage etc. Note, the room can only accommodate two people who are close. Do not expect your family of four to be comfortable in one room. I highly recommend the fabulous little Italian restaurant just around the corner from the hotel, Bon Amici. I will stay at this hotel everytime I come to New York. </textarea>
                     <!--<input id="mainText1" name="text" type="text" class="form-control" value="This is a fabulous hotel. The breakfasts are great - fresh fruit  bagels, muffins, hot eggs and sausage etc. Just around the corner from the hotel is a fabulous little Italian restaurant - Bon Amici. I highly recommend it. ">
                     <input id="mainText2" name="text" type="hidden" class="form-control" placeholder="Select the Language and Text Source for Suggestion Extraction" autofocus="autofocus">-->
                 </div>
@@ -52,6 +52,10 @@
         </div>
         <pre id="result" hidden></pre>
         </form>
+        <form id="theForm2" onsubmit="event.preventDefault();" enctype="text/plain">
+            <button type="submit" id="keyphrase" class="btn-primary" hidden>Analyze</button>
+            <pre id="result2" hidden></pre>
+        </form>
     </div>
     <!-- jQuery Version 1.11.1 -->
     <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
@@ -59,14 +63,16 @@
     <script language="javascript" type="text/javascript">
         // Here you send & receive the data
         $(function () {
-
+            var inputSentence = "";
             $('#theForm1').submit(function () {
                 // First we get the JSON collected from the form
                 $("#result").hide();
+                $("#result2").hide();
                 var jsonValue = document.getElementById('mainText1').value;
                 $("#image").show();
                 $("#sendJson1").hide();
                 // We form the request url
+                //var jsonUrl1 =  "http://127.0.0.1:8080/shubham/" + encodeURIComponent(jsonValue)
                 var jsonUrl1 = "http://140.203.155.226:8080/RBS_Shubhi/webapi/check/" + encodeURIComponent(jsonValue)
                 $.ajax({
                     type: 'GET',
@@ -80,22 +86,58 @@
                         if (response == "") {
                             $('#result').text("No Suggestions found !");
                         } else {
-                            //$('#result').text(response.replace(/[^\w\s\',']/gi, '').replace(/[',']/g,'.\n'));
-
-                            $('#result').text(response);
+                            //$('#result').text(response);
+                            $('#result').text(response.replace(/['.']/g,'\n'));
+                            $("#keyphrase").show();
+                            inputSentence = response;
+                            var urlKeyphrase = "http://127.0.0.1:8080/shubham/" + inputSentence;
                         }
                         $('#result').show();
                         $('#sendJson1').show();
-                        document.getElementById("mainText1").value = '';
-
-
+                        //document.getElementById("mainText1").value = '';
                     },
                     error: function (XMLHttpRequest, textStatus, errorThrown) {
                         // Showing an error message if an error occured
                         $('#result').text(errorThrown);
                     }
                 });
-
+                // please don't remove the return false
+                return false;
+            });
+            $('#theForm2').submit(function () {
+                // First we get the JSON collected from the form
+                $("#image").show();
+                $("#keyphrase").hide();
+                // We form the request url
+                var jsonUrl2 =  "http://127.0.0.1:8080/shubham/" + encodeURIComponent(inputSentence);
+                //var jsonUrl1 = "http://140.203.155.226:8080/RBS_Shubhi/webapi/check/" + encodeURIComponent(jsonValue)
+                $.ajax({
+                    type: 'GET',
+                    url: "inc/get.php",
+                    data: {
+                        "url": jsonUrl2
+                    },
+                    success: function (response) {
+                        // Showing the result after using REGEX to clean it
+                        $("#image").hide();
+                        if (response == "") {
+                            $('#result2').text("No Suggestions found !");
+                        } else {
+                            $('#result2').text(response);
+                            //$('#result').text(response.replace(/['.']/g,'\n'));
+                            //$("#keyphrase").show();
+                            //inputSentence = response.replace(/['.']/g, '\n');
+                            //var urlKeyphrase = "http://127.0.0.1:8080/shubham/" + inputSentence;
+                        }
+                        $('#result2').show();
+                        //$('#sendJson1').show();
+                        //document.getElementById("mainText1").value = '';
+                    },
+                    error: function (XMLHttpRequest, textStatus, errorThrown) {
+                        // Showing an error message if an error occured
+                        $('#result2').text(errorThrown);
+                    }
+                });
                 // please don't remove the return false
                 return false;
             });
@@ -113,7 +155,7 @@
                 </div>
                 <div class="panel-body">
                     <p>
-                         This is a demonstrator for the research on Suggestion Mining carried out at the <a href="http://nlp.insight-centre.org/" target="_blank">Unit for Natural Language Processing, at the Insight Centre for Data Analytics ,Galway</a>. Suggestion Mining deals with the extraction of suggestion carrying sentences from any given text, mainly the opinionated text across different platforms like online reviews, discussion forums, tweets, political debates etc. After the suggestions sentences are extracted, a semantic analysis is performed for the themes present in those suggestions.
+                        This is a demonstrator for the research on Suggestion Mining carried out at the <a href="http://nlp.insight-centre.org/" target="_blank">Unit for Natural Language Processing, at the Insight Centre for Data Analytics ,Galway</a>. Suggestion Mining deals with the extraction of suggestion carrying sentences from any given text, mainly the opinionated text across different platforms like online reviews, discussion forums, tweets, political debates etc. After the suggestions sentences are extracted, a semantic analysis is performed for the themes present in those suggestions.
 
 
                     </p>

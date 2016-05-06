@@ -135,8 +135,6 @@ textarea { resize: none }
  
 /* header */
 header{background: rgba(247,247,247,1)}
-.logo{font-family: 'Gadget', cursive; font-size:40px; color:#606060}
-.logo .blue{color:#2980B9}
 header ul li{float: left;padding:14px 5px;position: relative}
 header ul li a{padding:15px 10px;color: #747475; text-decoration: none}
 header ul li a:hover{background: #4c99da; color:#fff}
@@ -202,4 +200,4 @@ background: -ms-linear-gradient(top,  #19587c 0%,#37abc5 52%,#a1d8dd 81%,#3f9bab
 background: linear-gradient(to bottom,  #19587c 0%,#37abc5 52%,#a1d8dd 81%,#3f9bab 100%);
 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#19587c', endColorstr='#3f9bab',GradientType=0 );
 */}
->>>>>>> branch 'master' of https://github.com/shubhammehrotra94/Suggestion-Mining-Demo.git
+

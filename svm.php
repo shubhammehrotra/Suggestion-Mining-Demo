@@ -122,7 +122,7 @@
                         }
                         $('#result').show();
                         $('#sendJson').show();
-                        document.getElementById("mainText1").value = '';
+                        //document.getElementById("mainText1").value = '';
 
 
                     },

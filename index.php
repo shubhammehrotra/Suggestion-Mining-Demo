@@ -100,8 +100,9 @@
                 var jsonValue = JSON.stringify(z);
                 $("#image").show();
                 $("#sendJson").hide();
-                //alert(jsonValue);
-                // We form the request url
+                console.log(jsonValue);
+                // We form the request ()
+                alert
                 var jsonUrl = "http://140.203.155.226:8080/miso/rest/suggest/getSuggestions?json=" + escape(jsonValue);
                 // send the request
                 $.ajax({
@@ -111,6 +112,7 @@
                         "url": jsonUrl
                     },
                     success: function (response) {
+                        console.log(response);
                         // Showing the result after using REGEX to clean it
                         $("#image").hide();
                         if (response.replace(/[^\w\s]/gi, '') == "") {
@@ -122,7 +124,7 @@
                         }
                         $('#result').show();
                         $('#sendJson').show();
-                        document.getElementById("mainText1").value = '';
+                        //document.getElementById("mainText1").value = '';
 
 
                     },
