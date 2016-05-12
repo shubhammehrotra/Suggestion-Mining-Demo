@@ -6,7 +6,7 @@
     
     <div class="col-md-3">
         <ul class="nav nav-pills nav-stacked admin-menu ">
-            <li><a><b>Suggestion Extraction Techniques</a></b>
+            <li><a><b>Suggestion Extraction Techniques</b></a>
             </li>
             <li class = "active"> <a href="#" data-target-id="NN">Deep Learning</a></li>
             <li><a href="svm.php" data-target-id="SVM">Support Vector Machines</a></li>
@@ -26,23 +26,21 @@
                     <!--<input id="mainText1" name="text" type="text" class="form-control" value="This is a fabulous hotel.The breakfasts are great - fresh fruit  bagels, muffins, hot eggs and sausage etc.Just around the corner from the hotel is a fabulous little Italian restaurant - Bon Amici.I highly recommend it.">
                     <input id="mainText2" name="text" type="hidden" class="form-control" placeholder="Select the Language and Text Source for Suggestion Extraction" autofocus="autofocus">-->
                 </div>
-                <div class="row">
-                    <div class="col-sm-1">
-                        <select class="language-select" name="language" label="Language">
-                            <option value="en" selected>English</option>
-                            <!--<option value="es">Spanish</option>
-                            <option value="fr">French</option>
-                            <option value="it">Italian</option>-->
-                        </select>
-                    </div>
-                    <div class="col-sm-1">
-                        <select class="language-select" name="textSource">
-                            <option value="ge" selected>General</option>
-                            <option value="tw">Twitter</option>
-                        </select>
-                    </div>
+                
+                <div class="col-sm-1">
+                    <select class="language-select" name="language" label="Language">
+                        <option value="en" selected>English</option>
+                        <!--<option value="es">Spanish</option>
+                        <option value="fr">French</option>
+                        <option value="it">Italian</option>-->
+                    </select>
                 </div>
-
+                <div class="col-sm-1">
+                    <select class="language-select" name="textSource">
+                        <option value="ge" selected>General</option>
+                        <option value="tw">Twitter</option>
+                    </select>
+                </div>
         </div>
 
             
@@ -62,8 +60,14 @@
             <br>
             <br>
         </div>
+    </form>
         <pre id="result" hidden></pre>
     </div>
+
+</div>
+
+
+
     <!-- jQuery Version 1.11.1 -->
     <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
 
@@ -151,5 +155,4 @@
     <br>
     <br>
     <br>
-    <div class="row">
     <?php include("inc/footer.php");?>
