@@ -95,14 +95,14 @@
             $('#theForm').submit(function () {
                 // First we get the JSON collected from the form
                 $("#result").hide();
-                var z = $('#theForm').serializeObject()
+                var z = $('#theForm').serializeObject();
                     //alert(z)
                 var jsonValue = JSON.stringify(z);
                 $("#image").show();
                 $("#sendJson").hide();
                 console.log(jsonValue);
                 // We form the request ()
-                alert
+                //alert
                 var jsonUrl = "http://140.203.155.226:8080/miso/rest/suggest/getSuggestions?json=" + escape(jsonValue);
                 // send the request
                 $.ajax({
