@@ -108,6 +108,7 @@
                 $.ajax({
                     type: 'GET',
                     url: "inc/get.php",
+                    datatype:'JSON',
                     data: {
                         "url": jsonUrl
                     },
