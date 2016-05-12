@@ -105,7 +105,7 @@
                 var jsonUrl = "http://140.203.155.226:8080/suggest-webservice/api/suggest/getSuggestions?json=" + escape(jsonValue);
                 // send the request
                 $.ajax({
-                    type: 'GET',
+                    type: 'POST',
                     url: "inc/get.php",
                     data: {
                         "url": jsonUrl

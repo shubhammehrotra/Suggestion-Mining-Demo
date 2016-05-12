@@ -106,7 +106,7 @@
                 var jsonUrl = "http://140.203.155.226:8080/miso/rest/suggest/getSuggestions?json=" + escape(jsonValue);
                 // send the request
                 $.ajax({
-                    type: 'GET',
+                    type: 'POST',
                     url: "inc/get.php",
                     datatype:'JSON',
                     data: {
