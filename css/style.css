@@ -201,3 +201,17 @@ background: linear-gradient(to bottom,  #19587c 0%,#37abc5 52%,#a1d8dd 81%,#3f9b
 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#19587c', endColorstr='#3f9bab',GradientType=0 );
 */}
 
+pre {
+    height: auto;
+    max-height: 400px;
+    white-space: pre-wrap;       /* CSS 3 */
+    white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
+    white-space: -pre-wrap;      /* Opera 4-6 */
+    white-space: -o-pre-wrap;    /* Opera 7 */
+    word-wrap: break-word; 
+    display: list-item
+    overflow: auto;
+    /*word-break: normal !important;
+    word-wrap: normal !important;
+    white-space: pre !important;*/
+}

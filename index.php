@@ -3,12 +3,12 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
-    
+
     <div class="col-md-3">
         <ul class="nav nav-pills nav-stacked admin-menu ">
             <li><a><b>Suggestion Extraction Techniques</b></a>
             </li>
-            <li class = "active"> <a href="#" data-target-id="NN">Deep Learning</a></li>
+            <li class="active"> <a href="#" data-target-id="NN">Deep Learning</a></li>
             <li><a href="svm.php" data-target-id="SVM">Support Vector Machines</a></li>
             <li><a href="RuleBased.php" data-target-id="RB">Rule Based</a></li>
         </ul>
@@ -26,7 +26,7 @@
                     <!--<input id="mainText1" name="text" type="text" class="form-control" value="This is a fabulous hotel.The breakfasts are great - fresh fruit  bagels, muffins, hot eggs and sausage etc.Just around the corner from the hotel is a fabulous little Italian restaurant - Bon Amici.I highly recommend it.">
                     <input id="mainText2" name="text" type="hidden" class="form-control" placeholder="Select the Language and Text Source for Suggestion Extraction" autofocus="autofocus">-->
                 </div>
-                
+
                 <div class="col-sm-1">
                     <select class="language-select" name="language" label="Language">
                         <option value="en" selected>English</option>
@@ -43,7 +43,7 @@
                 </div>
         </div>
 
-            
+
         <!--<div class="text-center"> <span>
 		<input type="radio" name="textSource" value="twitter" id="tw"> Twitter 
 		<input type="radio" name="textSource" value="general" id="ge"> General 
@@ -56,15 +56,28 @@
         <br>
         <div class="text-center">
             <button type="submit" id="sendJson" class="btn btn-primary btn-md pull-left">Extract</button>
+            <br>
             <img src="images/Spinner.svg" id="image" hidden>
             <br>
             <br>
         </div>
-    </form>
         <pre id="result" hidden></pre>
+        </form>
+
+        <form id="theForm2" onsubmit="event.preventDefault();" enctype="text/plain">
+            
+            <div class="text-center">
+                <br>
+                <button type="submit" id="keyphrase" class="btn-primary pull-left" hidden>Analyze</button>
+                <img src="images/Spinner.svg" id="image2" hidden>
+                <br>
+                <br>
+            </div>
+            <pre id="result2" hidden></pre>
+        </form>
     </div>
 
-</div>
+    </div>
 
 
 
@@ -100,7 +113,7 @@
                 // First we get the JSON collected from the form
                 $("#result").hide();
                 var z = $('#theForm').serializeObject();
-                    //alert(z)
+                //alert(z)
                 var jsonValue = JSON.stringify(z);
                 $("#image").show();
                 $("#sendJson").hide();
@@ -112,7 +125,7 @@
                 $.ajax({
                     type: 'POST',
                     url: "inc/get.php",
-                    datatype:'JSON',
+                    datatype: 'JSON',
                     data: {
                         "url": jsonUrl
                     },
@@ -126,6 +139,9 @@
                             //$('#result').text(response.replace(/[^\w\s\',']/gi, '').replace(/[',']/g,'.\n'));
 
                             $('#result').text(response.replace(/[^\w\s\'.']/gi, '').replace(/['.']/gi, '.\n'));
+                            $("#keyphrase").show();
+                            inputSentence = response;
+                            //var urlKeyphrase = "http://127.0.0.1:8080/shubham/" + inputSentence;
                         }
                         $('#result').show();
                         $('#sendJson').show();
@@ -142,17 +158,59 @@
                 // please don't remove the return false
                 return false;
             });
+            $('#theForm2').submit(function () {
+                // First we get the JSON collected from the form
+                $("#image2").show();
+                $("#keyphrase").hide();
+                // We form the request url
+                var jsonUrl2 = "http://127.0.0.1:5000/shubham/" + encodeURIComponent(inputSentence);
+                //var jsonUrl1 = "http://140.203.155.226:8080/RBS_Shubhi/webapi/check/" + encodeURIComponent(jsonValue)
+                $.ajax({
+                    type: 'POST',
+                    url: "inc/get.php",
+                    data: {
+                        "url": jsonUrl2
+                    },
+                    success: function (response) {
+                        // Showing the result after using REGEX to clean it
+                        $("#image2").hide();
+                        if (response == "") {
+                            $('#result2').text("No Keyphrases found !");
+                        } else {
+                            $('#result2').text(response);
+                            //$('#result').text(response.replace(/['.']/g,'\n'));
+                            //$("#keyphrase").show();
+                            //inputSentence = response.replace(/['.']/g, '\n');
+                            //var urlKeyphrase = "http://127.0.0.1:8080/shubham/" + inputSentence;
+                        }
+                        $('#result2').show();
+                        //$('#sendJson1').show();
+                        //document.getElementById("mainText1").value = '';
+                    },
+                    error: function (XMLHttpRequest, textStatus, errorThrown) {
+                        // Showing an error message if an error occured
+                        $('#result2').text(errorThrown);
+                    }
+                });
+                // please don't remove the return false
+                return false;
+            });
         });
     </script>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
+    <div class="col-md-12 ">
+        <br>
+        <br>
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title" align="center"><b>Suggestion Mining from Opinions</b></h3>
+            </div>
+            <div class="panel-body">
+                <p>
+                    This is a demonstrator for the research on Suggestion Mining carried out at the <a href="http://nlp.insight-centre.org/" target="_blank">Unit for Natural Language Processing, at the Insight Centre for Data Analytics ,Galway</a>. Suggestion Mining deals with the extraction of suggestion carrying sentences from any given text, mainly the opinionated text across different platforms like online reviews, discussion forums, tweets, political debates etc. After the suggestions sentences are extracted, a semantic analysis is performed for the themes present in those suggestions.
+
+
+                </p>
+            </div>
+        </div>
+    </div>
     <?php include("inc/footer.php");?>

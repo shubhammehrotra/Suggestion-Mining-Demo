@@ -25,27 +25,26 @@
                     <!--<input id="mainText1" name="text" type="text" class="form-control" value="This is a fabulous hotel. The breakfasts are great - fresh fruit  bagels, muffins, hot eggs and sausage etc. Just around the corner from the hotel is a fabulous little Italian restaurant - Bon Amici. I highly recommend it. ">
                     <input id="mainText2" name="text" type="hidden" class="form-control" placeholder="Select the Language and Text Source for Suggestion Extraction" autofocus="autofocus">-->
                 </div>
-                <div class="row">
-                    <div class="col-sm-1">
-                        <select class="language-select" name="language" label="Language">
-                            <option value="en" selected>English</option>
-                            <!--<option value="es">Spanish</option>
+                <div class="col-sm-1">
+                    <select class="language-select" name="language" label="Language">
+                        <option value="en" selected>English</option>
+                        <!--<option value="es">Spanish</option>
                             <option value="fr">French</option>
                             <option value="it">Italian</option>-->
-                        </select>
-                    </div>
-                    <div class="col-sm-1">
-                        <select class="language-select" name="textSource">
-                            <option value="ge" selected>General</option>
-                            <option value="tw">Twitter</option>
-                        </select>
-                    </div>
+                    </select>
+                </div>
+                <div class="col-sm-1">
+                    <select class="language-select" name="textSource">
+                        <option value="ge" selected>General</option>
+                        <option value="tw">Twitter</option>
+                    </select>
                 </div>
 
         </div>
         <br>
         <div class="text-center">
             <button type="submit" id="sendJson1" class="btn btn-primary btn-md pull-left">Extract</button>
+            <br>
             <img src="images/Spinner.svg" id="image" hidden>
             <br>
             <br>
@@ -53,7 +52,13 @@
         <pre id="result" hidden></pre>
         </form>
         <form id="theForm2" onsubmit="event.preventDefault();" enctype="text/plain">
-            <button type="submit" id="keyphrase" class="btn-primary" hidden>Analyze</button>
+            <div class="text-center">
+                <br>
+                <button type="submit" id="keyphrase" class="btn-primary pull-left" hidden>Analyze</button>
+                <img src="images/Spinner.svg" id="image2" hidden>
+                <br>
+                <br>
+            </div>
             <pre id="result2" hidden></pre>
         </form>
     </div>
@@ -87,7 +92,7 @@
                             $('#result').text("No Suggestions found !");
                         } else {
                             //$('#result').text(response);
-                            $('#result').text(response.replace(/['.']/g,'\n'));
+                            $('#result').text(response.replace(/['.']/g, '\n'));
                             $("#keyphrase").show();
                             inputSentence = response;
                             var urlKeyphrase = "http://127.0.0.1:8080/shubham/" + inputSentence;
@@ -106,10 +111,10 @@
             });
             $('#theForm2').submit(function () {
                 // First we get the JSON collected from the form
-                $("#image").show();
+                $("#image2").show();
                 $("#keyphrase").hide();
                 // We form the request url
-                var jsonUrl2 =  "http://127.0.0.1:5000/shubham/" + encodeURIComponent(inputSentence);
+                var jsonUrl2 = "http://127.0.0.1:5000/shubham/" + encodeURIComponent(inputSentence);
                 //var jsonUrl1 = "http://140.203.155.226:8080/RBS_Shubhi/webapi/check/" + encodeURIComponent(jsonValue)
                 $.ajax({
                     type: 'POST',
@@ -119,9 +124,9 @@
                     },
                     success: function (response) {
                         // Showing the result after using REGEX to clean it
-                        $("#image").hide();
+                        $("#image2").hide();
                         if (response == "") {
-                            $('#result2').text("No Suggestions found !");
+                            $('#result2').text("No Keyphrases found !");
                         } else {
                             $('#result2').text(response);
                             //$('#result').text(response.replace(/['.']/g,'\n'));
@@ -144,22 +149,19 @@
         });
     </script>
     </div>
-    <div class="row">
-
-        <div class="col-md-12 ">
-            <br>
-            <br>
-            <div class="panel panel-default">
-                <div class="panel-heading">
-                    <h3 class="panel-title" align="center"><b>Suggestion Mining from Opinions</b></h3>
-                </div>
-                <div class="panel-body">
-                    <p>
-                        This is a demonstrator for the research on Suggestion Mining carried out at the <a href="http://nlp.insight-centre.org/" target="_blank">Unit for Natural Language Processing, at the Insight Centre for Data Analytics ,Galway</a>. Suggestion Mining deals with the extraction of suggestion carrying sentences from any given text, mainly the opinionated text across different platforms like online reviews, discussion forums, tweets, political debates etc. After the suggestions sentences are extracted, a semantic analysis is performed for the themes present in those suggestions.
+    <div class="col-md-12 ">
+        <br>
+        <br>
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title" align="center"><b>Suggestion Mining from Opinions</b></h3>
+            </div>
+            <div class="panel-body">
+                <p>
+                    This is a demonstrator for the research on Suggestion Mining carried out at the <a href="http://nlp.insight-centre.org/" target="_blank">Unit for Natural Language Processing, at the Insight Centre for Data Analytics ,Galway</a>. Suggestion Mining deals with the extraction of suggestion carrying sentences from any given text, mainly the opinionated text across different platforms like online reviews, discussion forums, tweets, political debates etc. After the suggestions sentences are extracted, a semantic analysis is performed for the themes present in those suggestions.
 
 
-                    </p>
-                </div>
+                </p>
             </div>
         </div>
     </div>
