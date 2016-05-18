@@ -32,31 +32,31 @@
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="pre.css">
     <div class="col-md-3">
-        <div class="container">
-            <ul class="nav nav-tabs">
-                <li class="active"><a data-toggle="tab" href="#product">Product Reviews</a></li>
-                <li><a data-toggle="tab" href="#hotel">Hotel Reviews</a></li>
-            </ul>
-            <div class="tab-content">
-                <div id="product" class="tab-pane fade in active">
-                    <ul class="nav nav-pills nav-stacked admin-menu " id="list1">
 
-                        <li><a href="#" id="Pr1">Nook Ebook Reader</a></li>
-                        <li><a href="#" id="P2">Product 2</a></li>
-                        <li><a href="#" id="P3">Product 3</a></li>
-                        <li><a href="#" id="P4">Product 4</a></li>
-                    </ul>
-                </div>
-                <div id="hotel" class="tab-pane fade">
-                    <ul class="nav nav-pills nav-stacked admin-menu " id="list2">
-                        <li><a href="#" id="Pr1">Hotel 1</a></li>
-                        <li><a href="#" id="P2">Hotel 2</a></li>
-                        <li><a href="#" id="P3">Hotel 3</a></li>
-                        <li><a href="#" id="P4">Hotel 4</a></li>
-                    </ul>
-                </div>
+        <ul class="nav nav-tabs">
+            <li class="active"><a data-toggle="tab" href="#product">Product Reviews</a></li>
+            <li><a data-toggle="tab" href="#hotel">Hotel Reviews</a></li>
+        </ul>
+        <div class="tab-content">
+            <div id="product" class="tab-pane fade in active">
+                <ul class="nav nav-pills nav-stacked admin-menu " id="list1">
+
+                    <li><a href="#" id="Pr1">Nook Ebook Reader</a></li>
+                    <li><a href="#" id="P2">Product 2</a></li>
+                    <li><a href="#" id="P3">Product 3</a></li>
+                    <li><a href="#" id="P4">Product 4</a></li>
+                </ul>
+            </div>
+            <div id="hotel" class="tab-pane fade">
+                <ul class="nav nav-pills nav-stacked admin-menu " id="list2">
+                    <li><a href="#" id="Pr1">Hotel 1</a></li>
+                    <li><a href="#" id="P2">Hotel 2</a></li>
+                    <li><a href="#" id="P3">Hotel 3</a></li>
+                    <li><a href="#" id="P4">Hotel 4</a></li>
+                </ul>
             </div>
         </div>
+
 
     </div>
     <br>
@@ -85,6 +85,7 @@
             //alert(clicked);
             //$('#p1').show();
             $('#p6').show();
+            
             $('#pr6').hide();
             document.getElementById("p6").innerHTML = "";
             $('#p1').text("Suggestions to be fetched from the api for:  " + clicked);
