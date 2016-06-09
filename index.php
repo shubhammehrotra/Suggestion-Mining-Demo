@@ -65,7 +65,7 @@
         </form>
 
         <form id="theForm2" onsubmit="event.preventDefault();" enctype="text/plain">
-            
+
             <div class="text-center">
                 <br>
                 <button type="submit" id="keyphrase" class="btn-primary pull-left" hidden>Analyze</button>
@@ -140,7 +140,7 @@
 
                             $('#result').text(response.replace(/[^\w\s\'.']/gi, '').replace(/['.']/gi, '.\n'));
                             $("#keyphrase").show();
-                            inputSentence = response;
+                            inputSentence = response.replace(/[^\w\s\'.']/gi, '').replace(/['.']/gi, '.\n');
                             //var urlKeyphrase = "http://127.0.0.1:8080/shubham/" + inputSentence;
                         }
                         $('#result').show();
@@ -177,13 +177,32 @@
                         if (response == "") {
                             $('#result2').text("No Keyphrases found !");
                         } else {
-                            $('#result2').text(response);
-                            //$('#result').text(response.replace(/['.']/g,'\n'));
+                            //$('#result2').text(response.replace(/['.']/g,' '));
+                            //$('#result2').text(response.replace(/['\'']/g, ''));
+                            string = response.replace(/['\'']/g, '').replace(/['[']/g,'').replace(/['\]']/g,'');
                             //$("#keyphrase").show();
                             //inputSentence = response.replace(/['.']/g, '\n');
                             //var urlKeyphrase = "http://127.0.0.1:8080/shubham/" + inputSentence;
                         }
                         $('#result2').show();
+                        //alert(string.length);
+                        var res = inputSentence.split(".");
+                        //console.log(res);
+                        splStr = string.replace(/^\s+|\s+$/g, '').split(',');
+                        var output = '';
+                        for (var i = 0; i < splStr.length; i++) {
+                            console.log(splStr[i]);
+                            output = output + splStr[i] + ":  ";
+                            //$('#result2').text(splStr[i] + ":  ");
+                            for (var j = 0; j < res.length; j++) {
+                                if (res[j].toLowerCase().indexOf(splStr[i].replace(/^\s+|\s+$/g, '')) > -1) {
+                                    console.log(res[j]);
+                                    //$('#result2').text(res[j]);
+                                    output = output + " " + res[j];
+                                }
+                            } output = output + "\n";   
+                            //Do something
+                        }$('#result2').text(output);
                         //$('#sendJson1').show();
                         //document.getElementById("mainText1").value = '';
                     },
@@ -192,7 +211,7 @@
                         $('#result2').text(errorThrown);
                     }
                 });
-                // please don't remove the return false
+                // please don't remove the return false     
                 return false;
             });
         });
