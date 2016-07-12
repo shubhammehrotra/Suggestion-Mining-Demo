@@ -61,15 +61,15 @@
                         </tr>
                         <tr>
                             <td>
-                                <p>Development: </p>
+                                <p>Development:</p>
                             </td>
                             <td>
-                                <p>&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://nlp.insight-centre.org/people/members/shubham-mehrotra/" target="_blank">Shubham Mehrotra</a> , <a href="http://nlp.insight-centre.org/people/members/kartik-asooja/" target="_blank">Kartik Asooja</p>
+                                <p>&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://nlp.insight-centre.org/people/members/shubham-mehrotra/" target="_blank">Shubham Mehrotra</a></p>
                                 </td>
                             </tr>
                         </tbody>
                     </table><br>
-                    <p class="large text-muted" align = "center">Special thanks to Housam Ziad for his inputs.
+                    <p class="large text-muted" align = "center">Special thanks to <a href="http://nlp.insight-centre.org/people/members/kartik-asooja/" target="_blank">Kartik Asooja and <a href="http://nlp.insight-centre.org/people/members/housam-ziad/" target="_blank">Housam Ziad for their inputs.
                     <br>Please write to <a href="mailto:sapna.negi@insight-centre.org"> sapna.negi@insight-centre.</a>org for any feedback or queries . </p>
             </div>
         </div>
