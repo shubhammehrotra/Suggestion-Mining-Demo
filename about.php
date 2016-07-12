@@ -69,7 +69,7 @@
                             </tr>
                         </tbody>
                     </table><br>
-                    <p class="large text-muted" align = "center">Special thanks to <a href="http://nlp.insight-centre.org/people/members/kartik-asooja/" target="_blank">Kartik Asooja and <a href="http://nlp.insight-centre.org/people/members/housam-ziad/" target="_blank">Housam Ziad for their inputs.
+                    <p class="large text-muted" align = "center">Special thanks to <a href="http://nlp.insight-centre.org/people/members/kartik-asooja/" target="_blank">Kartik Asooja</a> and <a href="http://nlp.insight-centre.org/people/members/housam-ziad/" target="_blank">Housam Ziad</a> for their inputs.
                     <br>Please write to <a href="mailto:sapna.negi@insight-centre.org"> sapna.negi@insight-centre.</a>org for any feedback or queries . </p>
             </div>
         </div>
