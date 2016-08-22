@@ -49,7 +49,7 @@
             </div>
             <div id="hotel" class="tab-pane fade">
                 <ul class="nav nav-pills nav-stacked admin-menu " id="list2">
-                    <l i><a href="#" id="Pr1">Hotel 1</a></li>
+                    <li><a href="#" id="Pr1">Hotel 1</a></li>
                     <li><a href="#" id="P2">Hotel 2</a></li>
                     <li><a href="#" id="P3">Hotel 3</a></li>
                     <li><a href="#" id="P4">Hotel 4</a></li>
