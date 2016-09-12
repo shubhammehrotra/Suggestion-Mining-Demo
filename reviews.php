@@ -237,7 +237,7 @@
                 .size([diameter - margin, diameter - margin])
                 .value(function (d) {
                     return d.size;
-                })
+                });
 
             var svg = d3.select("#p6").append("svg")
                 .attr("width", diameter)
@@ -265,28 +265,19 @@
                         $('#p1').hide();
                         $('#pr6').show();
                         if (focus !== d) zoom(d), d3.event.stopPropagation();
-                        var jsonUrl1 = "Sentences/Hotel1/" + d.name + " Sentence.txt";
-                        $.ajax({
-                            type: 'GET',
-                            url: "inc/get.php",
-                            data: {
-                                "url": jsonUrl1
-                            },
-                            success: function (response) {
-                                // Showing the result after using REGEX to clean it
-                                if (response == "") {
-                                    $('#pr6').text("Sorry !");
-                                } else {
-                                    $('#pr6').text(response);
-                                }
-                            },
-                            error: function (XMLHttpRequest, textStatus, errorThrown) {
-                                // Showing an error message if an error occured
-                                $('#pr6').text(errorThrown);
-                            }
+                        var filename1 = "Sentences/Hotel1/" + d.name + " Sentence.txt";
+                         jQuery.get(fileName1, function (data) {
+                            //alert(data);
+                            //process text file line by line
+                            // alet
+                            //alert(data)
+                            //alert(data);
+                            $("#pr6").text(data);
                         });
+                        if (focus !== d) zoom(d), d3.event.stopPropagation();
                     });
-
+                    
+                    
                 var text = svg.selectAll("text")
                     .data(nodes)
                     .enter().append("text")
