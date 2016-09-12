@@ -245,7 +245,7 @@
                 .append("g")
                 .attr("transform", "translate(" + diameter / 2 + "," + diameter / 2 + ")")
                 .attr("id", "graphic");
-            d3.json("flare1.json", function (error, root) {
+            d3.json("flare4.json", function (error, root) {
                 if (error) throw error;
 
                 var focus = root,
@@ -265,7 +265,7 @@
                         $('#p1').hide();
                         $('#pr6').show();
                         if (focus !== d) zoom(d), d3.event.stopPropagation();
-                        var jsonUrl1 = "enter server address here" + d.name + " Sentence.txt";
+                        var jsonUrl1 = "Sentences/Hotel1/" + d.name + " Sentence.txt";
                         $.ajax({
                             type: 'GET',
                             url: "inc/get.php",

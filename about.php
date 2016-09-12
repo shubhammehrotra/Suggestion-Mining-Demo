@@ -25,9 +25,11 @@
             <div class="panel-body">
                 <p>
                     <ul>
-                        <li>(To Appear) Sapna Negi, Paul Buitelaar Suggestion Mining from Opinionated Text In: Pozzi, F. A.; Fersini, E.; Messina, E.; Liu, B. (Eds.) The Handbook of Sentiment Analysis in Social Networks, Elsevier</li>
-                        <li><a href="http://aclweb.org/anthology/D/D15/D15-1258.pdf" target="_blank">Towards the Extraction of Customer-to-Customer Suggestions from Reviews, Sapna Negi and Paul Buitelaar, EMNLP 2015</a></li>
-                        <li><a href="http://www.aclweb.org/anthology/W/W15/W15-0115.pdf" target="_blank">Sapna Negi and Paul Buitelaar (2015) Curse or Boon? Presence of Subjunctive Mood in Opinionated Text, The 11th International Conference on Computational Semantics (IWCS 2015), London, UK</a></li>
+                            <li><a href = "https://aclweb.org/anthology/S/S16/S16-2022.pdf" target="_blank"> A Study of Suggestions in Opinionated Texts and their automatic Detection</a>. Sapna Negi, Kartik Asooja, Shubham Mehrotra, Paul Buitelaar. *SEM 2016, Co-located with ACL 2016, Berlin, Germany.</li>
+                            <li>(To Appear) Sapna Negi, Paul Buitelaar Suggestion Mining from Opinionated Text In: Pozzi, F. A.; Fersini, E.; Messina, E.; Liu, B. (Eds.) The Handbook of Sentiment Analysis in Social Networks, Elsevier</li>
+                            <li><a href="http://aclweb.org/anthology/D/D15/D15-1258.pdf" target="_blank">Towards the Extraction of Customer-to-Customer Suggestions from Reviews </a>. Sapna Negi and Paul Buitelaar. EMNLP 2015, Lisbon, Portugal.</li>
+                            <li><a href="http://www.aclweb.org/anthology/W/W15/W15-0115.pdf" target="_blank"> Curse or Boon? Presence of Subjunctive Mood in Opinionated Text </a>. Sapna Negi and Paul Buitelaar. The 11th International Conference on Computational Semantics (IWCS 2015), London, UK </li>
+                        </ul>
                     </ul>
                 </p>
             </div>

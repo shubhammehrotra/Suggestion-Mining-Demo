@@ -163,7 +163,7 @@
                 $("#image2").show();
                 $("#keyphrase").hide();
                 // We form the request url
-                var jsonUrl2 = "http://127.0.0.1:5000/shubham/" + encodeURIComponent(inputSentence);
+                var jsonUrl2 = "http://127.0.0.1:5000/" + encodeURIComponent(inputSentence);
                 //var jsonUrl1 = "http://140.203.155.226:8080/RBS_Shubhi/webapi/check/" + encodeURIComponent(jsonValue)
                 $.ajax({
                     type: 'POST',

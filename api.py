@@ -128,7 +128,7 @@ class Rake(object):
         sorted_keywords = sorted(keyword_candidates.items(), key=operator.itemgetter(1), reverse=True)
         return sorted_keywords
     
-@app.route('/shubham/<string:inputSentence>', methods = ['GET'])
+@app.route('/<string:inputSentence>', methods = ['GET'])
 
 def test(inputSentence):
     text = inputSentence
@@ -145,4 +145,4 @@ def test(inputSentence):
     keywords = rake.run(text)
     return str(keywords)
 if __name__ == '__main__':
-    app.run(debug = True, port = 8080)
+    app.run(debug = True)
