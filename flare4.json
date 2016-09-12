@@ -1,0 +1,340 @@
+{
+    "name": "flare",
+    "children": [
+        {
+            "name": "Topic 1",
+            "children": [
+                {
+                    "name": "canal location",
+                    "size": 8258
+                },
+                {
+                    "name": "amsterdam",
+                    "size": 10001
+                },
+                {
+                    "name": "star service",
+                    "size": 8217
+                },
+                {
+                    "name": "canal view rooms",
+                    "size": 12555
+                },
+                {
+                    "name": "starwood",
+                    "size": 2324
+                },
+                {
+                    "name": "bed",
+                    "size": 10993
+                }
+   ]
+  },
+        {
+            "name": "Topic 2",
+            "children": [
+                {
+                    "name": "evening",
+                    "size": 8258
+                },
+                {
+                    "name": "business trip",
+                    "size": 10001
+                },
+                {
+                    "name": "rate",
+                    "size": 8217
+                },
+                {
+                    "name": "points",
+                    "size": 12555
+                },
+                {
+                    "name": "canals",
+                    "size": 2324
+                },
+                {
+                    "name": "business",
+                    "size": 10993
+                }
+    ]
+  },
+        {
+            "name": "Topic 3",
+            "children": [
+                {
+                    "name": "hotel pulitzer",
+                    "size": 8258
+                },
+                {
+                    "name": "canal room",
+                    "size": 10001
+                },
+                {
+                    "name": "star hotel",
+                    "size": 8217
+                },
+                {
+                    "name": "hotel bar",
+                    "size": 12555
+                }
+    
+   ]
+  },
+        {
+            "name": "Topic 4",
+            "children": [
+                {
+                    "name": "night stay",
+                    "size": 8258
+                },
+                {
+                    "name": "day",
+                    "size": 10001
+                },
+                {
+                    "name": "husband",
+                    "size": 8217
+                },
+                {
+                    "name": "nothing",
+                    "size": 12555
+                },
+                {
+                    "name": "bar",
+                    "size": 2324
+                },
+                {
+                    "name": "reception",
+                    "size": 10993
+                },
+                {
+                    "name": "nights",
+                    "size": 335
+                }
+   ]
+  },
+        {
+            "name": "Topic 5",
+            "children": [
+                {
+                    "name": "us business",
+                    "size": 8258
+                },
+                {
+                    "name": "us",
+                    "size": 10001
+                },
+                {
+                    "name": "wall",
+                    "size": 8217
+                },
+                {
+                    "name": "category",
+                    "size": 12555
+                },
+                {
+                    "name": "furniture",
+                    "size": 2324
+                },
+                {
+                    "name": "floor",
+                    "size": 10993
+                },
+                {
+                    "name": "neighbourhood",
+                    "size": 335
+                },
+                {
+                    "name": "stay",
+                    "size": 383
+                }
+   ]
+  },
+        {
+            "name": "Topic 6",
+            "children": [
+                {
+                    "name": "upgrade",
+                    "size": 8258
+                },
+                {
+                    "name": "check",
+                    "size": 10001
+                },
+                {
+                    "name": "everything",
+                    "size": 8217
+                },
+                {
+                    "name": "matter",
+                    "size": 12555
+                }, 
+                {
+                    "name": "credit",
+                    "size": 2324
+                },
+                {
+                    "name": "reservations",
+                    "size": 10993
+                },
+                {
+                    "name": "hours",
+                    "size": 335
+                },
+                {
+                    "name": "friend",
+                    "size": 383
+                },
+                {
+                    "name": "arrival",
+                    "size": 874
+                },
+                {
+                    "name": "trip",
+                    "size": 17705
+                }
+   ]
+  },
+        {
+            "name": "Topic 7",
+            "children": [
+                {
+                    "name": "star service hotel",
+                    "size": 8258
+                },
+                {
+                    "name": "starwood hotel reservation",
+                    "size": 10001
+                },
+                {
+                    "name": "pulitzer",
+                    "size": 8217
+                },
+                {
+                
+                    "name": "location",
+                    "size": 12555
+                },
+                {
+                    "name": "bathroom",
+                    "size": 2324
+                },
+                {
+                    "name": "rooms",
+                    "size": 10993
+                },
+                {
+                    "name": "staff",
+                    "size": 335
+                },
+                {
+                    "name": "service",
+                    "size": 383
+                }
+   ]
+  },
+        {
+            "name": "Topic 8",
+            "children": [
+                {
+                    "name": "bar staff",
+                    "size": 8258
+                },
+                {
+                    "name": "bit",
+                    "size": 10001
+                },
+                {
+                    "name": "breakfast",
+                    "size": 8217
+                },
+                {
+                    "name": "food",
+                    "size": 12555
+                },
+                {
+                    "name": "night",
+                    "size": 2324
+                },
+                {
+                    "name": "canal",
+                    "size": 10993
+                },
+                {
+        
+                    "name": "staff attitude",
+                    "size": 335
+                },
+                {
+                    "name": "reservation",
+                    "size": 383
+                },
+                
+                {
+                    "name": "canal view",
+                    "size": 17705
+                }
+   ]
+  },
+        {
+            "name": "Topic 9",
+            "children": [
+                {
+                    "name": "room",
+                    "size": 8258
+                },
+                {
+                
+                    "name": "hotel room",
+                    "size": 10001
+                },
+                {
+                    "name": "hotel",
+                    "size": 8217
+                },
+                {
+                    "name": "room service",
+                    "size": 12555
+                }
+   ]
+  },
+        {
+            "name": "Topic 10",
+            "children": [
+                {
+                    "name": "place",
+                    "size": 8258
+                },
+                {
+                    "name": "price",
+                    "size": 10001
+                },
+                {
+                    "name": "amsterdam neighborhood",
+                    "size": 8217
+                },
+                {
+                    "name": "starwood reservations",
+                    "size": 12555
+                },
+                {
+                    "name": "star",
+                    "size": 2324
+                },
+                {
+                    "name": "fact",
+                    "size": 10993
+                },
+                {
+                    "name": "way",
+                    "size": 335
+                },
+                {
+                    "name": "view",
+                    "size": 17705
+                }
+   ]
+  }
+ ]
+}
